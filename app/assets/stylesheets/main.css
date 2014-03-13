@@ -293,7 +293,7 @@ section {
 }
 
 .bg-1 {
-    background: url('../../../../../Desktop/codealia%20scaffold%20code/img/bg1.png') no-repeat center center fixed;
+    background: url('../images/bg1.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -301,7 +301,7 @@ section {
 }
 
 .codealia {
-    background: url('../../../../../Desktop/codealia%20scaffold%20code/img/Codealia-concept.png');
+    background: url('../images/Codealia-concept.png');
     position: fixed;
     left: 20px;
     top: 80px;
