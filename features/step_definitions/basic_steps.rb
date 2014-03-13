@@ -9,7 +9,7 @@ Then(/^the current path should be "([^"]*)"$/) do |path|
 end
 
 Given(/^I am on the "(.*?)" page$/) do |page|
-  visit '/#{page}'
+  visit "/#{page.downcase}"
 end
 
 Then(/^I should see "(.*?)"$/) do |string|
