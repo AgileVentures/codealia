@@ -44,7 +44,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :development, :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'better_errors'
 end
