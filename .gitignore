@@ -33,3 +33,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Precompiled Assets
+public/assets
