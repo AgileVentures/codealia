@@ -334,6 +334,10 @@ section {
     z-index: 100;
 }
 
+#home-welcome.float {
+    width: initial;
+}
+
 /* float the circe menu */
 .menu-float {
 	position: fixed;
