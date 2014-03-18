@@ -310,7 +310,7 @@ section {
 }
 
 .codealia {
-    background: url('/assets/Codealia-concept.png');
+    background: url('/assets/Codealia-concept.png') no-repeat;
     position: fixed;
     left: 20px;
     top: 80px;
