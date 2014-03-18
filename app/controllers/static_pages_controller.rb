@@ -7,4 +7,6 @@ class StaticPagesController < ApplicationController
     @about = 'About Us'
   end
 
+  def instructors
+  end
 end
