@@ -35,4 +35,4 @@ _yardoc
 doc/
 
 # Precompiled Assets
-public/assets
+public/assets/**
