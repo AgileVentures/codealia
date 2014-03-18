@@ -6,6 +6,7 @@
 
 # Ignore JetBrains IDE folder
 .idea/*
+
 # Ignore bundler config.
 /.bundle
 

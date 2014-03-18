@@ -308,7 +308,7 @@ section {
 }
 
 .bg-1 {
-    background: url('/assets/bg1.png') no-repeat center center fixed;
+    background: url('/images/bg1.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -316,7 +316,7 @@ section {
 }
 
 .codealia {
-    background: url('/assets/Codealia-concept.png') no-repeat;
+    background: url('/images/Codealia-concept.png') no-repeat;
     position: fixed;
     left: 20px;
     top: 80px;
