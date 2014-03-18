@@ -135,11 +135,17 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 90px !important;
     color: white;
+    margin-top: 0.47em;
     margin-left: -5px;
 }
 
+h2 {
+    font-size: 50px !important;
+    color: white;
+    margin-left: -5px;
+}
 h3 {
     margin-bottom: -25px;
     color: white;
@@ -302,7 +308,7 @@ section {
 }
 
 .bg-1 {
-    background: url('../images/bg1.png') no-repeat center center fixed;
+    background: url('/assets/bg1.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -310,20 +316,20 @@ section {
 }
 
 .codealia {
-    background: url('/assets/Codealia-concept.png');
+    background: url('/assets/Codealia-concept.png') no-repeat;
     position: fixed;
     left: 20px;
     top: 80px;
     width: 400px;
     height: 1200px;
-    z-index: 100;
+    z-index: 0;
 }
 
 /* float the well */
 .float {
-    position: absolute;
-    left: -50px;
-    top: 300px;
+    position: relative;
+
+    top: 100px;
     width: 90%;
     z-index: 100;
 }
