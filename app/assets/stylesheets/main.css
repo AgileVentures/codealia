@@ -90,6 +90,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+#footer {
+
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 0px;
+}
+
+
+
+
 body {
     background-color: rgba(244, 156, 21, 0.6);
 }
@@ -161,6 +180,7 @@ a:hover {text-decoration: none;}
 
 .well {
     background-color: rgba(236, 240, 241, 0.6);
+    z-index: 20;
 }
 
 .well h1 {
@@ -317,22 +337,34 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    z-index: 1;
+    max-height: 40%;
+
 }
 
 .codealia {
     background: url('/images/Codealia-concept.png') no-repeat;
-    position: fixed;
+    position: absolute;
     left: 20px;
     top: 80px;
     width: 400px;
-    height: 1200px;
-    z-index: 0;
+    height: 110%;
+}
+
+#float-box {
+    top: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+#footer-box {
+    bottom: -20px;
+    position: fixed;
 }
 
 /* float the well */
 .float {
     position: relative;
-
     top: 100px;
     width: 90%;
     z-index: 100;

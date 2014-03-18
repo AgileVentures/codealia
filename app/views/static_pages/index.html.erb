@@ -1,13 +1,11 @@
-<div class="col-md-5 col-sm-offset-4 float">
-  <h2 style="margin-bottom: -45px;">I am</h2>
 
-  <h1>codealia</h1>
-</div>
+<!-- Main content of the page. Remember to add 'float' cass to elements -->
 
-<div class="col-sm-8 col-sm-offset-4">
-  <!-- Main content of the page. Remember to add 'float' cass to elements -->
-  <div class="row">
-    <div class="well float">
+  <div class="col-sm-8 col-sm-offset-4">
+    <h2 style="margin-bottom: -45px;">I am</h2>
+
+    <h1>codealia</h1>
+    <div class="well">
       <p>As Software engineers - we are worried that there are way to few female colleagues in our industry
         - and we sincerely believe that it leads to poor quality of the software we produce. </p>
 
@@ -24,32 +22,40 @@
         courses in their communities. Our goal is to offer a complete solution - we will build and open source
         comprehensive course content, web-based tools for learning, practical information for instructors and organizers
         and marketing materials.</p>
+
     </div>
+    <div class="row">
+      <div class="col-md-4">
+        <img class= "image-circle" src="http://placehold.it/150x150">
+        <h2>Learn</h2>
+
+        <p>Want to learn how to create using computers and the web? Get updates on future courses.</p>
+
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <img class= "image-circle" src="http://placehold.it/150x150">
+        <h2>Mentor</h2>
+
+        <p>Want to see more women in the tech sector? Join us.</p>
+
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <img class= "image-circle" src="http://placehold.it/150x150">
+        <h2>Contribute</h2>
+
+        <p>Codealia needs your help. Become a friend on social media and help us build the project.</p>
+
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+      </div>
+    </div>
+
   </div>
-  <div class="row float">
-    <div class="col-md-4">
-      <h2>Learn</h2>
-
-      <p>Want to learn how to create using computers and the web? Get updates on future courses.</p>
-
-      <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-    </div>
-
-    <div class="col-md-4">
-      <h2>Mentor</h2>
-
-      <p>Want to see more women in the tech sector? Join us.</p>
-
-      <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-    </div>
-
-    <div class="col-md-4">
-      <h2>Contribute</h2>
-
-      <p>Codealia needs your help. Become a friend on social media and help us build the project.</p>
-
-      <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-    </div>
-  </div>
-  <!-- End of main content -->
+<div id="footer">
+  <%= render 'layouts/footer' %>
 </div>
+
+<!-- End of main content -->
