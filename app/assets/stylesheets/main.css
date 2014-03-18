@@ -168,6 +168,11 @@ a:hover {text-decoration: none;}
     color: black;
 }
 
+.well p {
+    font-size:18px !important;
+    color: black;
+}
+
 .well h2, h3, h4 {
     margin-bottom: -1px !important;
     color: black !important;
