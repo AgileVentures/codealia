@@ -97,36 +97,35 @@ body {
 
 @font-face {
     font-family: 'science_fairitalic';
-    src: url('/assets/science_fair_italic-webfont.eot');
-    src: url('/assets/science_fair_italic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/assets/science_fair_italic-webfont.woff') format('woff'),
-    url('/assets/science_fair_italic-webfont.ttf') format('truetype'),
-    url('/assets/science_fair_italic-webfont.svg#science_fairitalic') format('svg');
+    src: url('/fonts/science_fair_italic-webfont.eot');
+    src: url('/fonts/science_fair_italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/science_fair_italic-webfont.woff') format('woff'),
+    url('/fonts/science_fair_italic-webfont.ttf') format('truetype'),
+    url('/fonts/science_fair_italic-webfont.svg#science_fairitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'science_fairlight';
-    src: url('/assets/science_fair_light-webfont.eot');
-    src: url('/assets/science_fair_light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/assets/science_fair_light-webfont.woff') format('woff'),
-    url('/assets/science_fair_light-webfont.ttf') format('truetype'),
-    url('/assets/science_fair_light-webfont.svg#science_fairlight') format('svg');
+    src: url('/fonts/science_fair_light-webfont.eot');
+    src: url('/fonts/science_fair_light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/science_fair_light-webfont.woff') format('woff'),
+    url('/fonts/science_fair_light-webfont.ttf') format('truetype'),
+    url('/fonts/science_fair_light-webfont.svg#science_fairlight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'science_fairregular';
-    src: url('/assets/science_fair-webfont.eot');
-    src: url('/assets/science_fair-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/assets/science_fair-webfont.woff') format('woff'),
-    url('/assets/science_fair-webfont.ttf') format('truetype'),
-    url('/assets/science_fair-webfont.svg#science_fairregular') format('svg');
+    src: url('/fonts/science_fair-webfont.eot');
+    src: url('/fonts/science_fair-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/science_fair-webfont.woff') format('woff'),
+    url('/fonts/science_fair-webfont.ttf') format('truetype'),
+    url('/fonts/science_fair-webfont.svg#science_fairregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 h1, h2, h3 {
