@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-    @message = 'Welcome to Codealia'
+    @message = 'I am Codealia'
   end
 
   def about
