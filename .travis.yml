@@ -2,24 +2,27 @@ language: ruby
 rvm:
 - 2.1.0
 before_install:
-- gem install bundler
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
+  - gem install bundler
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 before_script:
-- bundle exec rake db:create:all
-- bundle exec rake db:migrate
-- bundle exec rake db:test:prepare
+  - bundle exec rake db:create:all
+  - bundle exec rake db:migrate
+  - bundle exec rake db:test:prepare
 script:
-- bundle exec rake cucumber
-- bundle exec rake spec
+  - bundle exec rake cucumber
+  - bundle exec rake spec
 deploy:
   provider: heroku
   api_key:
     secure: Y9hnjl4MXQlIPuqTZT3oExGL/SQa4nrDbdZZrHpbEwaDuWFdRxjAYEnISFuLFxqmLKti30FDuysUd+NMD30PuPPJpNKx34agqxWOvd3+BEbJrqd8w5PhiQsf/9TEijP34NyuApdCLU5xB0FosMj15lZiylzTeRjX0GbTTvPbcG4=
-  app: codealia-develop
-  on:
-    repo: AgileVentures/codealia
+  strategy: git
+  app:
+    develop: codealia-develop
+    staging: codealia-staging
+    master:  codealia-production
+  run: "rake db:migrate"
 notifications:
   email:
-  - info@agileventures.org
-  - pete@agileventures.org
+    - info@agileventures.org
+    - pete@agileventures.org
