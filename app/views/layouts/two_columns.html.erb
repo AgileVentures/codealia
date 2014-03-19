@@ -1,0 +1,17 @@
+
+<div class="container-fluid">
+  <div id="float-box">
+    <div class="col-sm-9 col-sm-offset-3">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
+</div>
+
+<div class="codealia animated fadeInLeft" style="opacity: 1;"></div>
+<section class="bg-1">
+  <div class="container">
+  </div>
+</section>
+
+<%= parent_layout 'application' %>
