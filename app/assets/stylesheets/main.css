@@ -342,6 +342,9 @@ section {
     height: 840px;
 }
 
+@media (max-width: 480px) { .codealia { visibility: hidden;} }
+@media (max-width: 767px) { .codealia { visibility: hidden;} }
+
 #float-box {
     top: 50px;
     position: absolute;
