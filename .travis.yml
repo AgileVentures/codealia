@@ -15,11 +15,9 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: Y9hnjl4MXQlIPuqTZT3oExGL/SQa4nrDbdZZrHpbEwaDuWFdRxjAYEnISFuLFxqmLKti30FDuysUd+NMD30PuPPJpNKx34agqxWOvd3+BEbJrqd8w5PhiQsf/9TEijP34NyuApdCLU5xB0FosMj15lZiylzTeRjX0GbTTvPbcG4=
+    secure: "ShC0LWFz8V/8xqv9X+/tegggaD7I2w9KJxRpxFEspon494TZyJTBhJD33SRl7V1Ewh3GpvHjwPDqJXpU0K8SpBwdVA0IjtaRpmWcZQdqB+qrQR5XJBAh6HtB6czlanU7WPJQCvo+SQdhTlO4WERlR0+tfz0XCiqHfWgT3i4HOqM="
   app:
-    develop: codealia-develop
-    staging: codealia-staging
-    master: codealia-production
+    develop: codealia-sampriti
 notifications:
   email:
     - info@agileventures.org
