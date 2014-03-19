@@ -16,7 +16,10 @@ deploy:
   provider: heroku
   api_key:
     secure: Y9hnjl4MXQlIPuqTZT3oExGL/SQa4nrDbdZZrHpbEwaDuWFdRxjAYEnISFuLFxqmLKti30FDuysUd+NMD30PuPPJpNKx34agqxWOvd3+BEbJrqd8w5PhiQsf/9TEijP34NyuApdCLU5xB0FosMj15lZiylzTeRjX0GbTTvPbcG4=
-  app: codealia-develop
+  app:
+    develop: codealia-develop
+    staging: codealia-staging
+    master: codealia-production
   on:
     repo: AgileVentures/codealia
 notifications:
