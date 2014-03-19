@@ -6,6 +6,7 @@
 
 # Ignore JetBrains IDE folder
 .idea/*
+
 # Ignore bundler config.
 /.bundle
 
@@ -33,3 +34,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Precompiled Assets
+public/assets/**
