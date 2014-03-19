@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
     @about = 'About Us'
   end
 
+  def codealia_ide
+  end
+
 end
