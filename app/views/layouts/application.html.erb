@@ -9,9 +9,10 @@
 <body>
 <%= render partial: 'layouts/navbar' %>
 <div class="container-fluid">
-<div id="float-box">
-  <%= yield %>
-</div>
+  <div id="float-box">
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </div>
 </div>
 <div class="codealia animated fadeInLeft" style="opacity: 1;"></div>
 <section class="bg-1">
