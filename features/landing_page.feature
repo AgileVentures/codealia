@@ -9,6 +9,7 @@ Feature: Create a website
 
 
   Scenario: Check for links
-    Then I should see link to "Contributors"
-    And I should see link to "Donors"
-    And I should see link to "Mentors"
+    # Then show me the page
+    And I should see a link "Learn more" to "Donors"
+    And I should see a link "Learn more" to "Developers"
+    And I should see link "Learn more" to "Mentors"
