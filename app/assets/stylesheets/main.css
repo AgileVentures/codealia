@@ -172,6 +172,8 @@ a:hover {text-decoration: none;}
 .well {
     background-color: rgba(236, 240, 241, 0.6);
     z-index: 20;
+    width: 100% !important;
+    min-width: 100%;
 }
 
 .well h1 {
@@ -347,6 +349,7 @@ section {
 
 #float-box {
     top: 50px;
+    max-width: 100%;
     position: absolute;
     z-index: 100;
 }

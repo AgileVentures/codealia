@@ -10,14 +10,15 @@ class StaticPagesController < ApplicationController
   end
 
   def terms_and_conditions
+    @title = 'Terms & Conditions'
   end
 
   def instructors
     @title = 'Instructors'
   end
 
-  def contributors
-    @title = 'Contributors'
+  def developers
+    @title = 'Developers'
   end
 
   def donors
