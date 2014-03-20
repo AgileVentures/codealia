@@ -9,6 +9,9 @@ class StaticPagesController < ApplicationController
     @about = 'About Us'
   end
 
+  def terms_and_conditions
+  end
+
   def instructors
     @title = 'Instructors'
   end
