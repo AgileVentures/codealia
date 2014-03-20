@@ -9,3 +9,5 @@ Scenario: Visit the about page
   When I am on the "About" page 
   Then the current path should be "about"
   And I should see "About Us"
+
+

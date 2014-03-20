@@ -31,3 +31,6 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+Then(/^I should see link to "([^"]*)"$/) do |link|
+  page.should have_link link.downcase
+end
