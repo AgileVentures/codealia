@@ -10,5 +10,18 @@ class StaticPagesController < ApplicationController
   end
 
   def instructors
+    @title = 'Instructors'
+  end
+
+  def contributors
+    @title = 'Contributors'
+  end
+
+  def donors
+    @title = 'Donors'
+  end
+
+  def mentors
+    @title = 'Mentors'
   end
 end
