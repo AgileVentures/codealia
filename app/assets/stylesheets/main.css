@@ -98,15 +98,6 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
 }
-#footer {
-
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 0px;
-}
-
-
 
 
 body {
@@ -348,8 +339,11 @@ section {
     left: 20px;
     top: 80px;
     width: 400px;
-    height: 110%;
+    height: 840px;
 }
+
+@media (max-width: 480px) { .codealia { visibility: hidden;} }
+@media (max-width: 767px) { .codealia { visibility: hidden;} }
 
 #float-box {
     top: 50px;
@@ -357,10 +351,17 @@ section {
     z-index: 100;
 }
 
-#footer-box {
-    bottom: -20px;
+.footer-box {
+    bottom: 0px;
     position: fixed;
+    z-index: 100;
 }
+
+#footer2 {
+    bottom: 0px;
+
+}
+
 
 /* float the well */
 .float {

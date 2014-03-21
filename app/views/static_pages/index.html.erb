@@ -1,7 +1,6 @@
 
 <!-- Main content of the page. Remember to add 'float' cass to elements -->
 
-  <div class="col-sm-8 col-sm-offset-4">
     <h2 style="margin-bottom: -45px;">I am</h2>
 
     <h1>codealia</h1>
@@ -31,7 +30,7 @@
 
         <p>Want to learn how to create using computers and the web? Get updates on future courses.</p>
 
-        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        <%= link_to 'Learn more', instructors_path, class: 'btn btn-default' %>
       </div>
 
       <div class="col-md-4">
@@ -53,9 +52,5 @@
       </div>
     </div>
 
-  </div>
-<div id="footer">
-  <%= render 'layouts/footer' %>
-</div>
 
 <!-- End of main content -->
