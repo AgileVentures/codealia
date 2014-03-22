@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  layout 'two_columns'
+
   def index
     @message = 'I am Codealia'
   end
@@ -10,4 +12,6 @@ class StaticPagesController < ApplicationController
   def codealia_ide
   end
 
+  def instructors
+  end
 end
