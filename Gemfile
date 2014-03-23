@@ -22,6 +22,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'better_errors'
+  gem 'poltergeist'
+  gem 'jasmine'
 end
 
 group :production do
