@@ -9,6 +9,9 @@ class StaticPagesController < ApplicationController
     @about = 'About Us'
   end
 
+  def code_playground
+  end
+
   def instructors
   end
 end
