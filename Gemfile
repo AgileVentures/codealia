@@ -24,6 +24,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'poltergeist'
   gem 'jasmine'
+  gem 'jasmine-jquery-rails'
 end
 
 group :production do

@@ -8,33 +8,38 @@ Codealia.IDE = function(options) {
   this._output = $('#' + options.output);
 
   // raw evaluation function
-  this._evaluateRaw = function(code, print) {
+  function evaluateRaw(code, log) {
     eval(code);
+  }
+
+  this.log = function(input) {
+    this._outputBuffer += input.toString() + "\n";
+    if (!this._isExecuting) {
+      this.refresh();
+    }
   };
 
-  this._print = (function(caller) {
-    return function(input) {
-      caller.__proto__.print.call(caller, input);
-    };
-  })(this);
+  this.refresh = function() {
+    // TODO do this the jQuery way
+    this._output[0].innerText = this._outputBuffer;
+    this._output[0].scrollTop = this._output[0].scrollHeight;
+  };
 
-  this._refresh = (function(caller) {
-    return function() {
-      caller.__proto__.refresh.call(caller);
-    };
-  })(this);
+  this.evaluate = function(code) {
+    evaluateRaw(code, this.log.bind(this));
+  };
 
   this._evaluateCode = function(editor) {
     var code = editor.getSession().getValue();
     this._outputBuffer = '';
     this._isExecuting = true;
     try {
-      this._evaluateRaw(code, this._print);
+      this.evaluate(code);
     } catch(e) {
       window.console.log(e);
     }
     this._isExecuting = false;
-    this._refresh();
+    this.refresh();
 
     return true;
   };
@@ -56,17 +61,4 @@ Codealia.IDE = function(options) {
       };
     })(this)
   });
-};
-
-Codealia.IDE.prototype.print = function(input) {
-  this._outputBuffer += input.toString() + "\n";
-  if (!this._isExecuting) {
-    this.refresh();
-  }
-};
-
-Codealia.IDE.prototype.refresh = function() {
-  // TODO do this the jQuery way
-  this._output[0].innerText = this._outputBuffer;
-  this._output[0].scrollTop = this._output[0].scrollHeight;
 };

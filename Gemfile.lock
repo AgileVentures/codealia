@@ -75,6 +75,7 @@ GEM
       rack (>= 1.2.1)
       rake
     jasmine-core (2.0.0)
+    jasmine-jquery-rails (2.0.2)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -181,6 +182,7 @@ DEPENDENCIES
   database_cleaner
   font-awesome-rails
   jasmine
+  jasmine-jquery-rails
   jbuilder (~> 1.2)
   jquery-rails
   pg
