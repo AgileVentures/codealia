@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
     @about = 'About Us'
   end
 
-  def codealia_ide
+  def code_playground
   end
 
   def instructors
