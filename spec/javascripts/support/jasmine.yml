@@ -12,6 +12,7 @@
 #
 src_files:
   - assets/application.js
+  - assets/codealia-ide/ide.js
   - assets/ace/ace.js
   - assets/jasmine-jquery.js
 
