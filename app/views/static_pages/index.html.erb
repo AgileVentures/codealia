@@ -2,8 +2,8 @@
 <!-- Main content of the page. Remember to add 'float' cass to elements -->
 
   <header>
+    <h2>I am</h2>
     <h1>codealia</h1>
-    <h2>Codes</h2>
   </header>
 
     <div class="well">
@@ -36,7 +36,7 @@
       
       <!-- <p>Providing practical manuals and promotional guides for instructors and organizers.</p> -->
 
-      <h3>Want to see more women in IT?</h3>
+      <h3>Want to see more women in technology?</h3>
 
       <p><strong>Join Us</strong> &amp; help us in blazing the trail for women in Computer Science!</p>
 
@@ -62,23 +62,23 @@
     <div class="row">
       <div class="col-md-4">
         <img src="<%= image_path('CTA1.png')%>">
-        <h2>Donors</h2>
+        <h2 class="text-center">Donors</h2>
         <p>Codealia has a strong emphasis on collaboration, co-operation and self-organising teams. With your contributions Codealia will be able to change the world.</p>
-        <%= link_to 'Learn more', donors_path, class: 'btn btn-default' %>
+        <div class="cta"><%= link_to 'Learn more', donors_path, class: 'btn btn-default' %></div>
       </div>
 
       <div class="col-md-4">
         <img src="<%= image_path('CTA3.png')%>">
-        <h2>Mentors</h2>
+        <h2 class="text-center">Mentors</h2>
         <p>We welcome everyone who wants to get involved in our project.</p>
-        <p><%= link_to 'Learn more', mentors_path, class: 'btn btn-default' %></p>
+        <div class="cta"><%= link_to 'Learn more', mentors_path, class: 'btn btn-default' %></div>
       </div>
 
       <div class="col-md-4">
         <img src="<%= image_path('CTA2.png')%>">
-        <h2>Developers</h2>
+        <h2 class="text-center">Developers</h2>
         <p>Help us build out an open source, comprehensive course providing web-based tools for learning and practical information for instructors and organisers.</p>
-        <p><%= link_to 'Learn more', developers_path, class: 'btn btn-default' %></p>
+        <div class="cta"><%= link_to 'Learn more', developers_path, class: 'btn btn-default' %></div>
       </div>
     </div>
 
