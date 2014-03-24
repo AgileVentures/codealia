@@ -2,7 +2,6 @@ class StaticPagesController < ApplicationController
   layout 'two_columns'
 
   def index
-    @message = 'I am Codealia'
   end
 
   def about
@@ -11,6 +10,9 @@ class StaticPagesController < ApplicationController
 
   def terms_and_conditions
     @title = 'Terms & Conditions'
+  end
+
+  def code_playground
   end
 
   def instructors

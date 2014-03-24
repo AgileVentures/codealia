@@ -23,6 +23,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'better_errors'
   gem 'launchy'
+  gem 'poltergeist'
+  gem 'jasmine'
+  gem 'jasmine-jquery-rails'
 end
 
 group :production do
