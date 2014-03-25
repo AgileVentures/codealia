@@ -1,11 +1,47 @@
 
 <!-- Main content of the page. Remember to add 'float' cass to elements -->
 
-    <h2 style="margin-bottom: -45px;">I am</h2>
-
+  <header>
+    <h2>I am</h2>
     <h1>codealia</h1>
+  </header>
+
     <div class="well">
-      <p>As Software engineers - we are worried that there are way to few female colleagues in our industry
+      <h2>Women in Computer Science</h2>
+
+      <p>Codealia believes in diversity and we aspire to a future filled with smart, educated programmers - women as well as men. We are a dedicated group of software engineers who want to reverse the declining numbers of women in Computer Science.</p>
+
+      <p>Codealia seeks to level the playing field by developing a free open-source learning platform with an engaging curriculum targeting young girls.  Our interactive program will foster collaboration, teamwork and open communication which will pave the way to future careers in the information technology field.</p>
+
+      <h3>The Problem</h3>
+
+      <blockquote>Sarah Allen quote?</blockquote>
+
+      <p>Women's representation in the computing and information technology workforce has been falling.</p>
+
+      <p>An imbalanced non-inclusive workforce that fails to embrace the talent of women neglects the fact that women have surpassed men in Internet usage since the year 2000.</p>
+
+      <p>Lack of diversity impairs an organization's ability to respond to an increasingly varied global user base. This negatively impacts relations with the surrounding community and reduces the organization's ability to respond to change.</p>
+
+      <p>Users of IT products are just as likely to be women as men. However, most of these products are created with little or no input from female developers. We need broader, more inclusive perspectives in order to achieve better results.</p>
+
+      <h3>The Solution</h3>
+      <!-- TODO: insert educator quote from Viv -->
+      <blockquote><!-- “Women choosing not to go into computer science is fine, - if there aren’t artificial barriers keeping them out.” --> <a href="http://www.nytimes.com/2008/11/16/business/16digi.html">ELLEN SPERTUS</a> quote?</blockquote>
+      <p><!-- We are missing out on half of the customer base for our software products which ought to be built by people who understand the end user.  -->Increasing the number of women software engineers expands the creativity and responsiveness of our workforce.</p>
+      
+      <p>Codealia will build out a complete offering - a free open-source palette of tools, guides and lesson plans. </p><p>Individuals and organizations can use Codealia's tools to deliver both web-based and live computer science courses targeted towards girls in their communities.</p>
+      
+      <p>We'll make the course content fun, interactive and engaging for the next generation of coders!</p>
+      
+      <!-- <p>Providing practical manuals and promotional guides for instructors and organizers.</p> -->
+
+      <h3>Want to see more women in technology?</h3>
+
+      <p><strong>Join Us</strong> &amp; help us in blazing the trail for women in Computer Science!</p>
+
+
+      <!-- <p>As Software engineers - we are worried that there are way to few female colleagues in our industry
         - and we sincerely believe that it leads to poor quality of the software we produce. </p>
 
       <p>We want to help to change that and make computer science attractive for young women and help them
@@ -20,35 +56,29 @@
       <p>The goal of the project is to create a palette of tools that individuals and organizations can use to deliver
         courses in their communities. Our goal is to offer a complete solution - we will build and open source
         comprehensive course content, web-based tools for learning, practical information for instructors and organizers
-        and marketing materials.</p>
+        and marketing materials.</p> -->
 
     </div>
     <div class="row">
       <div class="col-md-4">
-        <img class= "image-circle" src="http://placehold.it/150x150">
-        <h2>Learn</h2>
-
-        <p>Want to learn how to create using computers and the web? Get updates on future courses.</p>
-
-        <%= link_to 'Learn more', instructors_path, class: 'btn btn-default' %>
+        <img src="<%= image_path('CTA1.png')%>">
+        <h2 class="text-center">Donors</h2>
+        <p>Codealia has a strong emphasis on collaboration, co-operation and self-organising teams. With your contributions Codealia will be able to change the world.</p>
+        <div class="cta"><%= link_to 'Learn more', donors_path, class: 'btn btn-default' %></div>
       </div>
 
       <div class="col-md-4">
-        <img class= "image-circle" src="http://placehold.it/150x150">
-        <h2>Mentor</h2>
-
-        <p>Want to see more women in the tech sector? Join us.</p>
-
-        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        <img src="<%= image_path('CTA3.png')%>">
+        <h2 class="text-center">Mentors</h2>
+        <p>We welcome everyone who wants to get involved in our project.</p>
+        <div class="cta"><%= link_to 'Learn more', mentors_path, class: 'btn btn-default' %></div>
       </div>
 
       <div class="col-md-4">
-        <img class= "image-circle" src="http://placehold.it/150x150">
-        <h2>Contribute</h2>
-
-        <p>Codealia needs your help. Become a friend on social media and help us build the project.</p>
-
-        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        <img src="<%= image_path('CTA2.png')%>">
+        <h2 class="text-center">Developers</h2>
+        <p>Help us build out an open source, comprehensive course providing web-based tools for learning and practical information for instructors and organisers.</p>
+        <div class="cta"><%= link_to 'Learn more', developers_path, class: 'btn btn-default' %></div>
       </div>
     </div>
 

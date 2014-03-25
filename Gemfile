@@ -22,6 +22,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'better_errors'
+  gem 'launchy'
   gem 'poltergeist'
   gem 'jasmine'
   gem 'jasmine-jquery-rails'
