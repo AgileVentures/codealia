@@ -10,4 +10,4 @@ Feature: As a team member,
   Scenario: Participant avatars
   	Given I am on the "about" page
   	# And "Pete" and "Thomas" are contributors
-  	Then I should see avatars for "Pete, Thomas"
+  	Then I should see avatars for "Pete, Thomas, Bryan, Sampriti"

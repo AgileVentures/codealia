@@ -1,14 +1,42 @@
 <div class="well">
-<%= @about %>
+	<h2><%= @about %></h2>
 
-<ul>
-	<li>
-		<img id="avatarThomas" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('thomas@nocebo.se') %>" />
-		Thomas
-	</li>
-	<li>
-		<img id="avatarPete" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('petebouch@gmail.com') %>" />
-		Pete
-	</li>
-</ul>
+	<div class="row">
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img id="avatarPete" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('petebouch@gmail.com') %>" alt="Pete">
+	    </a>
+	    <p>Pete</p>
+	  </div>
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img id="avatarThomas" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('thomas@nocebo.se') %>" alt="Thomas">
+	    </a>
+	    <p>Thomas</p>
+	  </div>
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img id="avatarBryan" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('bryan.yap.mh@gmail.com') %>" alt="Bryan">
+	    </a>
+	    <p>Bryan</p>
+	  </div>
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img id="avatarSampriti" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('sampdingo@hotmail.com') %>" alt="Sampriti">
+	    </a>
+	    <p>Sampriti</p>
+	  </div>
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img id="avatarJeff" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('subskriptions@gmail.com') %>" alt="Jeff">
+	    </a>
+	  	<p>Jeff</p>
+	  </div>
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img id="avatarTemplate" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('email') %>" alt="Others">
+	    </a>
+	  	<p>Others</p>
+	  </div>
+	</div>
 </div>
