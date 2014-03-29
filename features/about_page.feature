@@ -6,3 +6,8 @@ Feature: As a team member,
   	Given I visit the site
   	And I click "About us"
   	Then I should be on the "about" page
+
+  Scenario: Participant avatars
+  	Given I am on the "about" page
+  	# And "Pete" and "Thomas" are contributors
+  	Then I should see avatars for "Pete, Thomas"

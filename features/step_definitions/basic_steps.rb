@@ -46,7 +46,7 @@ Then(/^I should see a footer area$/) do
   page.should have_css('section#footer')
 end
 
-Then /^show me the page$/ do
+Then(/^show me the page$/) do
   save_and_open_page
 end
 
@@ -61,4 +61,10 @@ end
 
 Given(/^I click "(.*?)"$/) do |text|
   click_link(text)
+end
+
+Then(/^I should see avatars for "(.*?)"$/) do |devs|
+  devs.split(',').each do |name|
+    page.should have_css('img#avatar' + name)
+  end
 end
