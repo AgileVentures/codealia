@@ -174,6 +174,7 @@ a:hover {text-decoration: none;}
     z-index: 20;
     width: 100% !important;
     min-width: 100%;
+    font-size: 18px !important;
 }
 
 .well h1 {
@@ -182,7 +183,6 @@ a:hover {text-decoration: none;}
 }
 
 .well p {
-    font-size:18px !important;
     color: black;
 }
 
@@ -372,8 +372,9 @@ section {
 
   a {
     color: white;
+    font-weight: bold;
     &:hover, &:active {
-      color: gray;
+      color: #F8C372;
     }
   }
 }

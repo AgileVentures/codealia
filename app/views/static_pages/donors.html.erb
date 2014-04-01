@@ -1,6 +1,8 @@
 <h2><%= @title %></h2>
 <div class="well">
-  <img src="http://placehold.it/450x250">
+  <div class="pull-right" style="max-width: 50%;margin-left: 30px;">
+    <img class="img-responsive img-thumbnail" src="<%= image_path('GirlsPP450.png') %>" width="450" alt="Girls pair programming">
+  </div>
   <!-- Pictures of team members or 30s video to make donors feel good about sending their money -->
   <p>Codealia has a strong emphasis on working together, co-operation and self-organising teams. With your contibutions Codealia will be able to:</p>
 
@@ -19,4 +21,4 @@
 
 </div>
 
-<%= link_to 'Back', :back, :class => 'btn btn-danger' %>
+<%= link_to 'Back', :back, :class => 'btn btn-default' %>
