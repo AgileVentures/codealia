@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render partial: 'layouts/navbar' %>
-<%= yield %>
+
+<div class="container-fluid" style="margin-top: 50px;">
+  <%= render partial: 'layouts/navbar' %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</div>
 
 </body>
 </html>
