@@ -10,6 +10,10 @@ Feature: Create a website
 
   Scenario: Check for links
     # Then show me the page
-    And I should see a link "Learn more" to "Donors"
-    And I should see a link "Learn more" to "Developers"
-    And I should see link "Learn more" to "Mentors"
+    Then I should see a link to the "Donors" page
+    And I should see a link to the "Developers" page
+    And I should see link to the "Mentors" page
+
+  Scenario: Check for links in footer
+    Then I should see a link "About us" to "about"
+

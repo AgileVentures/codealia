@@ -1,20 +1,13 @@
 
-<div class="container">
-  <div id="float-box">
-    <div class="col-sm-8 col-sm-offset-3">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
-
+<div class="row">
+  <div class="col-sm-3">
+    <div class="codealia animated fadeInLeft" style="opacity: 1;"></div>
   </div>
-
+  <div class="col-sm-8">
+    <%= yield %>
+  </div>
 </div>
 
-
-<div class="codealia animated fadeInLeft" style="opacity: 1;"></div>
-<section class="bg-1">
-  <div class="container">
-  </div>
-</section>
+<section class="bg-1"></section>
 
 <%= parent_layout 'application' %>
