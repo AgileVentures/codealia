@@ -96,7 +96,7 @@ html {
 }
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
 }
 
 
@@ -330,16 +330,19 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    z-index: 1;
+    z-index: -1;
     max-height: 40%;
-
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
 }
 
 .codealia {
     background: url('/images/Codealia-concept.png') no-repeat;
     position: absolute;
     left: 20px;
-    top: 80px;
+    top: 0px;
     width: 400px;
     height: 840px;
 }
@@ -361,8 +364,18 @@ section {
 }
 
 #footer2 {
-    bottom: 0px;
+    margin-top: 30px;
+    padding-top: 20px;
+    height: 100px;
+    background: url('/images/bg1.png') repeat center center fixed;
+    color: white;
 
+  a {
+    color: white;
+    &:hover, &:active {
+      color: gray;
+    }
+  }
 }
 
 
