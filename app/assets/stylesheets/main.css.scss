@@ -344,7 +344,7 @@ section {
 
 .codealia {
     background: url('/images/Codealia-concept.png') no-repeat;
-    position: absolute;
+    position: relative;
     left: 20px;
     top: 0px;
     width: 400px;
@@ -366,23 +366,6 @@ section {
     position: fixed;
     z-index: 100;
 }
-
-#footer2 {
-    margin-top: 30px;
-    padding-top: 20px;
-    height: 100px;
-    background: url('/images/bg1.png') repeat center center fixed;
-    color: white;
-
-  a {
-    color: white;
-    font-weight: bold;
-    &:hover, &:active {
-      color: #F8C372;
-    }
-  }
-}
-
 
 /* float the well */
 .float {

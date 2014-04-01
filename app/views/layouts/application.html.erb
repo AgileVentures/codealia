@@ -8,10 +8,17 @@
 </head>
 <body>
 
-<div class="container-fluid" style="margin-top: 50px;">
-  <%= render partial: 'layouts/navbar' %>
-  <%= yield %>
-  <%= render 'layouts/footer' %>
+<div id="wrap">
+  <div class="container-fluid" style="min-height: 100%; margin-top: 50px;">
+    <%= render partial: 'layouts/navbar' %>
+    <%= yield %>
+  </div>
+  <div id="push"></div>
+</div>
+<div id="footer">
+  <div class="container-fluid">
+    <%= render 'layouts/footer' %>
+  </div>
 </div>
 
 </body>
