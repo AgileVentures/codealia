@@ -1,42 +1,112 @@
-<div class="well">
-	<h2><%= @about %></h2>
+<h2>About Us</h2>
 
-	<div class="row">
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img id="avatarPete" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('petebouch@gmail.com') %>" alt="Pete">
-	    </a>
-	    <p>Pete</p>
-	  </div>
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img id="avatarThomas" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('thomas@nocebo.se') %>" alt="Thomas">
-	    </a>
-	    <p>Thomas</p>
-	  </div>
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img id="avatarBryan" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('bryan.yap.mh@gmail.com') %>" alt="Bryan">
-	    </a>
-	    <p>Bryan</p>
-	  </div>
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img id="avatarSampriti" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('sampdingo@hotmail.com') %>" alt="Sampriti">
-	    </a>
-	    <p>Sampriti</p>
-	  </div>
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img id="avatarJeff" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('subskriptions@gmail.com') %>" alt="Jeff">
-	    </a>
-	  	<p>Jeff</p>
-	  </div>
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img id="avatarTemplate" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('email') %>" alt="Others">
-	    </a>
-	  	<p>Others</p>
-	  </div>
-	</div>
+<div class="well">
+  <!--div class="row">
+    <div class="col-md-12">
+      <h3>The Project</h3>
+
+      <p>The Codealia project is an initiative of the UK-based non-profit organization Agile Ventures. Agile Ventures
+        develops IT solutions for customers in the non-profit sector. </p>
+
+      <p>We are dedicated to crowdsourced learning and Agile software development using pair programming technologies,
+        code reviews and daily scrums.</p>
+
+      <p>Find our website at <a href="http://www.agileventures.org">www.agileventures.org</a> or check out our
+        <a href="http://www.facebook.com/AgileVentures">Facebook page</a>.</p>
+    </div>
+  </div-->
+  <div class="row">
+    <div class="col-md-6">
+      <h3>History of Codealia</h3>
+
+      <p>Thomas Ochman and Pete Boucher, both members of Agile Ventures, thought up of the idea of Codealia: Where Girls
+        Learn to Code. The project team is comprised of both female and male software developers from all over the world
+        who want to see more women in computer science. </p>
+
+      <p>Codealia.org operates under the MIT License and there is full transparency with all content and materials
+        published on the site. We gear the curriculum specifically to young girls in order to give them an early start
+        in the field of engineering science. Our team proudly uses Agile methods and Ruby on Rails as the framework to
+        deliver well-tested and reliable software.</p>
+
+      <p>Learn more about what we are currently doing on our Facebook page or follow us on Twitter.</p>
+    </div>
+
+    <div class="col-md-6 team">
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <div id="avatarThomas" class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-thumbnail avatar" src="https://images.indiegogo.com/individuals/3710310/pictures/thumbnail/20130621160831-thomas.jpg?1371856113" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h4 class="media-heading">Thomas</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <div id="avatarLuchinda" class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-thumbnail avatar" src="https://images.indiegogo.com/individuals/3718559/pictures/thumbnail/20140330125951-1557672_191596937700394_1191444816_n.jpg?1396209595" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h4 class="media-heading">Luchinda</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <div id="avatarPete" class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-thumbnail avatar" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('petebouch@gmail.com') %>" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h4 class="media-heading">Pete</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <div id="avatarViv" class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-thumbnail avatar" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('CVMailer_2011@yahoo.com') %>" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h4 class="media-heading">Viv</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <div id="avatarMarian" class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-thumbnail avatar" src="http://www.gravatar.com/avatar/<%= Digest::MD5::hexdigest('marian.mosley@gmail.com') %>" alt="Marian Mosley">
+            </a>
+
+            <div class="media-body">
+              <h4 class="media-heading">Marian</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <div id="avatarSam" class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-thumbnail avatar" src="https://images.indiegogo.com/individuals/377053/pictures/thumbnail/20120111013829-CIMG006020120111-2165-e5tql1-0.JPG?1326274740" alt="Sam Joseph">
+            </a>
+
+            <div class="media-body">
+              <h4 class="media-heading">Sam</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+

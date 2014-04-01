@@ -65,6 +65,6 @@ end
 
 Then(/^I should see avatars for "(.*?)"$/) do |devs|
   devs.split(',').each do |name|
-    page.should have_css('img#avatar' + name.strip)
+    page.should have_css('div#avatar' + name.strip)
   end
 end
