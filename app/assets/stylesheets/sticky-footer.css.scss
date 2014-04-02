@@ -1,0 +1,38 @@
+$footer-height: 180px;
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#wrap {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  padding-bottom: 40px;
+}
+
+#push {
+  height: $footer-height;
+}
+
+#footer {
+  position: relative;
+  padding: 30px 30px 15px 30px;
+  margin: -$footer-height 0 0 0;
+  height: $footer-height;
+  clear: both;
+  background: url('/images/bg1.png') repeat;
+  color: white;
+
+  a {
+    color: white;
+    font-weight: bold;
+    &:hover, &:active {
+      color: #F8C372;
+    }
+  }
+}
