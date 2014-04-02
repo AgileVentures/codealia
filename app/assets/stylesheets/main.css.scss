@@ -103,6 +103,20 @@ body {
 body {
     background-color: rgba(244, 156, 21, 0.6);
 }
+.team {
+  margin-top: 20px;
+}
+
+.media {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.avatar {
+  width: 100px;
+  height: 100px;
+}
 
 
 @font-face {
@@ -144,7 +158,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 90px !important;
+    font-size: 80px !important;
     color: white;
     margin-top: 0.47em;
     margin-left: -5px;
@@ -283,6 +297,10 @@ a:hover {text-decoration: none;}
     border-bottom-color: #ffffff;
 }
 
+div.avatar {
+    // margin: 40px 0;
+}
+
 @media (max-width: 767) {
     .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
         color: #ffffff;
@@ -340,7 +358,7 @@ section {
 
 .codealia {
     background: url('/images/Codealia-concept.png') no-repeat;
-    position: absolute;
+    position: relative;
     left: 20px;
     top: 0px;
     width: 400px;
@@ -362,23 +380,6 @@ section {
     position: fixed;
     z-index: 100;
 }
-
-#footer2 {
-    margin-top: 30px;
-    padding-top: 20px;
-    height: 100px;
-    background: url('/images/bg1.png') repeat center center fixed;
-    color: white;
-
-  a {
-    color: white;
-    font-weight: bold;
-    &:hover, &:active {
-      color: #F8C372;
-    }
-  }
-}
-
 
 /* float the well */
 .float {
