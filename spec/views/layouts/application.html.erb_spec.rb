@@ -33,4 +33,25 @@ describe 'layouts/application.html.erb' do
     rendered.should have_selector('div#push')
     rendered.should have_selector('div#footer')
   end
+
+  context 'social media links' do
+    before(:each) { render }
+
+    it 'should have a link to the Facebook page' do
+      rendered.should have_link 'Facebook', href: 'https://www.facebook.com/codealia'
+    end
+
+    it 'should have a link to the Twitter page' do
+      rendered.should have_link 'Twitter', href: 'https://twitter.com/codealia'
+    end
+
+    it 'should have a link to the Pinterest page' do
+      rendered.should have_link 'Pinterest', href: 'https://www.pinterest.com/codealia/'
+    end
+
+    it 'should have a link to the Instagram page' do
+      rendered.should have_link 'Instagram', href: 'https://instagram.com/codealia_learntocode#'
+    end
+
+  end
 end

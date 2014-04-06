@@ -6,6 +6,14 @@ html, body {
   margin: 0;
 }
 
+$fa-size: 18px;
+
+.fa-custom-social {
+  width: $fa-size;
+  height: $fa-size;
+  text-align: center;
+}
+
 #wrap {
   padding: 0;
   margin: 0;
