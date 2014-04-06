@@ -1,14 +1,16 @@
 def path_to(page_name, id = '')
   name = page_name.downcase
   case name
-  when 'about' then
-    about_path
-  when 'donors' then
-    donors_path
-  when 'developers' then
-    developers_path
-  when 'mentors' then
-    mentors_path
+    when 'about' then
+      about_path
+    when 'donors' then
+      donors_path
+    when 'developers' then
+      developers_path
+    when 'mentors' then
+      mentors_path
+    else
+      pending
   end
 end
 
@@ -55,7 +57,11 @@ Then(/^I should see[ a]* link to the "(.*?)" page$/) do |page_name|
   page.should have_xpath "//a[@href='#{url}']"
 end
 
-Given(/^I should see[ a]* link "([^"]*)" to "([^"]*)"$/) do |link_text, page_name|
+Given(/^I should see[ a]* link "([^"]*)" to "([^"]*)"$/) do |link_text, link|
+  page.should have_link link_text, :href => link
+end
+
+Given(/^I should see[ a]* link "([^"]*)" to "([^"]*)" page$/) do |link_text, page_name|
   page.should have_link link_text, :href => path_to(page_name)
 end
 
@@ -66,5 +72,16 @@ end
 Then(/^I should see avatars for "(.*?)"$/) do |devs|
   devs.split(',').each do |name|
     page.should have_css('div#avatar' + name.strip)
+  end
+end
+When(/^the page should include ([^"]*) for ([^"]*)$/) do |tag, content|
+  case tag
+    when 'script'then
+      case content
+        when 'Google Analytics' then page.should have_xpath("//script[text()[contains(.,'GoogleAnalyticsObject')]]", visible: false)
+      end
+    when 'css' then page.source.should have_xpath("//link[contains(@href, '#{content}')]", visible: false)
+    when 'js' then page.source.should have_xpath("//script[contains(@src, '#{content}')]", visible: false)
+
   end
 end
