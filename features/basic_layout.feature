@@ -13,3 +13,7 @@ Feature: Basic setup of application
   Scenario: Social media links in the application
     When I visit the site
     Then I should see a link "Facebook" to "https://www.facebook.com/codealia"
+    And  I should see a link "Twitter" to "https://twitter.com/codealia"
+    And  I should see a link "Pinterest" to "https://www.pinterest.com/codealia/"
+    And  I should see a link "Instagram" to "https://instagram.com/codealia_learntocode#"
+
