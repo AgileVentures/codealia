@@ -1,14 +1,16 @@
 def path_to(page_name, id = '')
   name = page_name.downcase
   case name
-  when 'about' then
-    about_path
-  when 'donors' then
-    donors_path
-  when 'developers' then
-    developers_path
-  when 'mentors' then
-    mentors_path
+    when 'about' then
+      about_path
+    when 'donors' then
+      donors_path
+    when 'developers' then
+      developers_path
+    when 'mentors' then
+      mentors_path
+    else
+      pending
   end
 end
 
@@ -55,7 +57,11 @@ Then(/^I should see[ a]* link to the "(.*?)" page$/) do |page_name|
   page.should have_xpath "//a[@href='#{url}']"
 end
 
-Given(/^I should see[ a]* link "([^"]*)" to "([^"]*)"$/) do |link_text, page_name|
+Given(/^I should see[ a]* link "([^"]*)" to "([^"]*)"$/) do |link_text, link|
+  page.should have_link link_text, :href => link
+end
+
+Given(/^I should see[ a]* link "([^"]*)" to "([^"]*)" page$/) do |link_text, page_name|
   page.should have_link link_text, :href => path_to(page_name)
 end
 
