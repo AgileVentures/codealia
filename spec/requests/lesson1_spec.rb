@@ -13,10 +13,11 @@ describe 'Lesson 1' do
       assert_select 'title', 'HTML Lesson 1'
     end
 
-    it 'should include bootstrap css and js' do
+    it 'should include bootstrap and jQuery' do
       # assert_select "link[href=?]", /bootstrap(.min)?.css/
       assert_select 'link[href=//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css]'
       assert_select 'script[src=//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js]'
+      assert_select 'script[src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js]'
     end
   end
 
