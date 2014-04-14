@@ -5,6 +5,7 @@ describe 'Lesson 1' do
     before :each do
       get lesson1_path
     end
+    
   	it 'should include a paragraph' do
       response.body.should include('Hello') 
     end
