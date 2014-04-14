@@ -1,0 +1,45 @@
+
+
+<div class="well">
+  <div class="row">
+    <div class="col-md-12">
+
+    <p id="notice"><%= notice %></p>
+
+
+    <%= render :partial => @post %>
+
+
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
+
+    <br />
+    <hr/>
+
+      <p>Comments</p>
+
+
+    <div id="comments">
+      <%= render :partial => @post.comments %>
+    </div>
+      <hr />
+
+    <%= form_for [@post, Comment.new] do |f| %>
+
+        <p> Add A New Comment </p>
+        <p>
+          <%= f.label :name, "Name" %><br/>
+          <%= f.text_field :name %>
+        </p>
+        <p>
+          <%= f.label :body, "Comment" %><br/>
+          <%= f.text_area :body %>
+        </p>
+        <p><%= f.submit "Add comment" %></p>
+
+    <% end %>
+
+    </div>
+
+  </div>
+</div>
