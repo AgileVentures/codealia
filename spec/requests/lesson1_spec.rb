@@ -26,6 +26,11 @@ describe 'Lesson 1' do
       get lesson1_path
       assert_select 'a'
       assert_select 'img'
+      assert_select 'p'
+      assert_select 'ul'
+      assert_select 'ol'
+      assert_select 'li'
+      assert_select 'footer'
     end
   end
 end
