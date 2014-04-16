@@ -16,39 +16,8 @@
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-      <div class="col-md-4">
-        <img class="img-responsive" src="http://placehold.it/390x150">
-        <h2>Image title</h2>
-        <p>Picture description if one is available.</p>
-        <ul>
-          <li>meta data: location</li>
-          <li>meta data: filesize</li>
-        </ul>
-        <p><a class="btn btn-default" href="#" role="button">View original &raquo;</a></p>
+      <div id="col1" class="col-md-12">
       </div>
-
-      <div class="col-md-4">
-        <img class="img-responsive" src="http://placehold.it/390x150">
-        <h2>Image title</h2>
-        <p>Picture description if one is available.</p>
-        <ul>
-          <li>meta data: location</li>
-          <li>meta data: filesize</li>
-        </ul>
-        <p><a class="btn btn-default" href="#" role="button">View original &raquo;</a></p>
-      </div>      
-
-      <div class="col-md-4">
-        <img class="img-responsive" src="http://placehold.it/390x150">
-        <h2>Image title</h2>
-        <p>Picture description if one is available.</p>
-        <ul>
-          <li>meta data: location</li>
-          <li>meta data: filesize</li>
-        </ul>
-        <p><a class="btn btn-default" href="#" role="button">View original &raquo;</a></p>
-      </div>
-    </div>
 
     <hr>
 
@@ -66,5 +35,20 @@
   </div> <!-- /container -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <!-- Google search API -->
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+  <script language="Javascript" type="text/javascript">
+    google.load('search', '1');
+
+    function OnLoad()
+    {
+      var searchControl = new google.search.SearchControl();
+      searchControl.addSearcher(new google.search.ImageSearch());
+      searchControl.draw(document.getElementById("col1"));
+      searchControl.execute("fairies disney");
+    }
+    google.setOnLoadCallback(OnLoad);
+  </script>
+
 </body>
 </html>
