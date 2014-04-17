@@ -202,8 +202,12 @@ function onPhotoLoaded(data, settings){
 				// instagramPhoto = '<span class="instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
 				// instagramPhoto +=    '<img src="' + photo.images.standard_resolution.url + '" width="100%">';
 				// instagramPhoto += '</span>';
-				instagramPhoto = '<div class="col-md-3 instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
-				instagramPhoto +=    '<img src="' + photo.images.standard_resolution.url + '" width="100%">';
+				instagramPhoto = '<div class="col-md-3" style="height: 500px; overflow: hidden;"><span class="instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
+				instagramPhoto +=    '<img src="' + photo.images.standard_resolution.url + '" width="100%"></span>';
+				instagramPhoto += '<h2>' + photo.user.full_name +  '</h2>'
+				instagramPhoto += '<ul><li>Date: ' + photo.created_time + '</li>'	
+				instagramPhoto += '<li>' + photo.likes.count + ' Likes</li></ul>'
+				instagramPhoto += '<p>' + photoCaption + '</p>';
 				instagramPhoto += '</div>';
 
 	            $(instagramPhoto).appendTo(ibObj);
