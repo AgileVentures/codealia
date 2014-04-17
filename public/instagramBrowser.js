@@ -20,7 +20,8 @@ var customSettings;
 ------------------------------*/
 function instagramFetch(settings){	
 	var access_token = settings.accessToken;
-    var param = {access_token:access_token};
+	  var param = {client_id:'1949719b6c5043b6a49dbfd100f1cedd'};
+    // var param = {access_token:access_token};
     fetchCMD(param, settings);
 }
 
@@ -198,9 +199,12 @@ function onPhotoLoaded(data, settings){
 					photoCaption = "Instagram Photo";
 				}
 									
-				instagramPhoto = '<span class="instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
+				// instagramPhoto = '<span class="instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
+				// instagramPhoto +=    '<img src="' + photo.images.standard_resolution.url + '" width="100%">';
+				// instagramPhoto += '</span>';
+				instagramPhoto = '<div class="col-md-3 instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
 				instagramPhoto +=    '<img src="' + photo.images.standard_resolution.url + '" width="100%">';
-				instagramPhoto += '</span>';
+				instagramPhoto += '</div>';
 
 	            $(instagramPhoto).appendTo(ibObj);
             }
