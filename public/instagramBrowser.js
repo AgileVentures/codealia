@@ -47,7 +47,8 @@ function fetchCMD(param, settings){
 ------------------------------*/
 function instagramSearch(settings){
 	var access_token = settings.accessToken;
-    var param = {access_token:access_token};
+    // var param = {access_token:access_token};
+	  var param = {client_id:'1949719b6c5043b6a49dbfd100f1cedd'};
 
 	var searchQuery = $(".searchBox").val().replace(/ /g,'');
 		
