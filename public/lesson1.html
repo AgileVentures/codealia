@@ -16,8 +16,9 @@
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-      <div id="col1" class="col-md-12">
+      <div class="demo">
       </div>
+    </div>
 
     <hr>
 
@@ -35,20 +36,12 @@
   </div> <!-- /container -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <!-- Google search API -->
-  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-  <script language="Javascript" type="text/javascript">
-    google.load('search', '1');
-
-    function OnLoad()
-    {
-      var searchControl = new google.search.SearchControl();
-      searchControl.addSearcher(new google.search.ImageSearch());
-      searchControl.draw(document.getElementById("col1"));
-      searchControl.execute("fairies disney");
-    }
-    google.setOnLoadCallback(OnLoad);
+  <!-- Instagram API -->
+  <script src="instagramBrowser.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.demo').instagramBrowser();
+    });
   </script>
-
 </body>
 </html>
