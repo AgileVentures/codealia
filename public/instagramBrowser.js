@@ -34,7 +34,8 @@ function fetchCMD(param, settings){
 		cmdURL = 'https://api.instagram.com/v1/users/' + settings.userID + '/media/recent/?callback=?';
 	} else {
 		// Popular Mode
-    	cmdURL = 'https://api.instagram.com/v1/media/popular?callback=?';
+        cmdURL = "https://api.instagram.com/v1/tags/" + settings.tag + "/media/recent?callback=?";
+    	//cmdURL = 'https://api.instagram.com/v1/media/popular?callback=?';
 	}
 
    	$.getJSON(cmdURL, param, function(data){
@@ -51,6 +52,8 @@ function instagramSearch(settings){
   	var param = {client_id:client_id};
 
 	var searchQuery = $(".searchBox").val().replace(/ /g,'');
+
+    $('#test').text('Search results for:' + searchQuery);
 
     searchCMD(param, settings, searchQuery);
 }
@@ -185,6 +188,7 @@ function onPhotoLoaded(data, settings){
         if( photos.length > 0 ){
 
 			// console.log(photos);
+            $('.jumbotron').css('background-image', 'url(' + photos[1].images.standard_resolution.url + ')');
 
             for( var key in photos ){
 
@@ -213,6 +217,7 @@ function onPhotoLoaded(data, settings){
 				instagramPhoto += '</div>';
 
 	            $(instagramPhoto).appendTo(ibObj);
+                // Set background image
             }
 
 			// Count photos

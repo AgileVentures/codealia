@@ -1,0 +1,20 @@
+.bg-5 {
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, .9);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.bg-1 {
+    background: url('http://www.ilikewallpaper.net/ipad-air-wallpapers/download/8253/Dark-Pattern-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg') no-repeat top fixed;
+    /*background: #f16251;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
