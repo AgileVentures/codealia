@@ -180,6 +180,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   bootstrap-sass
+  capybara
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner
