@@ -115,7 +115,8 @@ function onUserLoaded(data, settings){
 ---------------------------------*/
 function instagramTagsLoadMore(settings){
 	var access_token = settings.accessToken;
-    var param = {access_token:access_token, max_tag_id: instagramBrowserNextMax};
+	var client_id = settings.client_id;
+    var param = {client_id:client_id, max_tag_id: instagramBrowserNextMax};
 
 	var searchQuery = $(".searchBox").val().replace(/ /g,'');
 
@@ -203,12 +204,12 @@ function onPhotoLoaded(data, settings){
 				// instagramPhoto = '<span class="instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
 				// instagramPhoto +=    '<img src="' + photo.images.standard_resolution.url + '" width="100%">';
 				// instagramPhoto += '</span>';
-				instagramPhoto = '<div class="col-md-3" style="height: 500px; overflow: hidden;"><span class="instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
+				instagramPhoto = '<div class="col-md-3" style="height:400px;overflow:hidden;"><span class="instagram-photo" rel="' + photo.user.full_name + '" id="p' + photo.id + '" title="' + photoCaption + ' (' + photo.likes.count + ' Likes)" data-created="' + photo.created_time + '">';
 				instagramPhoto +=    '<img src="' + photo.images.standard_resolution.url + '" width="100%"></span>';
-				instagramPhoto += '<h2>' + photo.user.full_name +  '</h2>'
-				instagramPhoto += '<ul><li>Date: ' + photo.created_time + '</li>'
-				instagramPhoto += '<li>' + photo.likes.count + ' Likes</li></ul>'
-				instagramPhoto += '<p>' + photoCaption + '</p>';
+				// instagramPhoto += '<h2>' + photo.user.full_name +  '</h2>'
+				// instagramPhoto += '<ul><li>Date: ' + photo.created_time + '</li>'
+				// instagramPhoto += '<li>' + photo.likes.count + ' Likes</li></ul>'
+				// instagramPhoto += '<p>' + photoCaption + '</p>';
 				instagramPhoto += '</div>';
 
 	            $(instagramPhoto).appendTo(ibObj);
@@ -326,7 +327,8 @@ $.fn.instagramBrowser = function ( options ) {
 				// Date Conversion
 				var obDate = parseInt(thisPhoto.attr("data-created"));
 				obDate = new Date( obDate * 1000 );
-				obDate = dateFormat(obDate, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+				//obDate = dateFormat(obDate, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+				obDate = obDate.getUTCDay() + '/' + obDate.getUTCMonth() + '/' + obDate.getYear();
 
 				var photoDesc = '<div class="instagram-hover-cover">';
 				photoDesc +=        '<h3>' + thisPhoto.attr("rel") + '</h3>';
