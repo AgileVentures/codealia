@@ -37,3 +37,6 @@ doc/
 
 # Precompiled Assets
 public/assets/**
+
+# rvm
+.rvmrc
