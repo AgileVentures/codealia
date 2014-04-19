@@ -1,4 +1,6 @@
 module AuthenticationHelper
+
+  # http://stackoverflow.com/questions/3768718/rails-rspec-make-tests-pass-with-http-basic-authentication
   def http_login(username, password)
     user = username
     pw = password
