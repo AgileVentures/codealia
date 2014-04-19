@@ -1,3 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Special+Elite|Bangers|Miltonian+Tattoo);
+html body {
+    font-family: 'Miltonian Tattoo';
+    /*
+    http://subtlepatterns.com/patterns/congruent_pentagon.png
+    http://subtlepatterns.com/patterns/sativa.png
+    http://subtlepatterns.com/patterns/skulls.png
+    http://subtlepatterns.com/patterns/food.png
+    http://subtlepatterns.com/patterns/lined_paper.png
+    http://subtlepatterns.com/patterns/giftly.png
+    */
+    background-image: url('http://subtlepatterns.com/patterns/food.png');
+    font-size: 20px;
+
+
+}
+
+.jumbotron h1 { font-family: 'Bangers';
+    font-size: 6em;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;  }
+
+h1 { font-family: 'Bangers';
+    font-size: 4em;
+    margin-bottom: 0;
+    color: darkgray;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px black;  }
+
+
+h2 { font-family: 'Miltonian Tattoo';
+    font-size: 3em;
+    margin: 0.25em;
+    color: darkgrey;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px white;
+}
+.jumbotron h2 { font-family: 'Miltonian Tattoo';
+     color: white;
+     text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+ }
+
+h4 { font-family: 'Special Elite';
+    font-size: 1.5em;
+}
+
+
+
 .bg-5 {
     padding-top: 20px;
     background-color: rgba(255, 255, 255, .9);
@@ -10,11 +56,11 @@
 }
 
 .bg-1 {
-    background: url('http://www.ilikewallpaper.net/ipad-air-wallpapers/download/8253/Dark-Pattern-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg') no-repeat top fixed;
-    /*background: #f16251;*/
+    background: url('http://www.ilikewallpaper.net/ipad-air-wallpapers/download/8253/Dark-Pattern-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg') no-repeat center 50%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 500px;
 }
 
