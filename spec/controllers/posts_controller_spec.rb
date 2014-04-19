@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 describe PostsController do
+  include AuthenticationHelper
   let(:post) { double :post }
+
   before do
     Post.stub(:find).and_return(post)
-    Post.stub(:authenticate_or_request_with_http_basic).and_return(true)
   end
 
   describe 'GET index' do
@@ -41,6 +42,8 @@ describe PostsController do
   end
 
   describe 'GET new' do
+    before(:each) { http_login('admin', 'secret') }
+
     it 'does call the authenticate method' do
       controller.should_receive(:authenticate)
       get :new, {}
@@ -52,9 +55,9 @@ describe PostsController do
     end
 
     it 'assigns a new post to @post' do
-      Post.should_receive(:new)
+      Post.should_receive(:new).and_return(post)
       get :new, {}
-      # assigns(:post).should eq post
+      assigns(:post).should eq post
     end
 
 
