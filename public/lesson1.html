@@ -6,11 +6,10 @@
     <link href="custom.css" rel="stylesheet">
 </head>
 <body>
-<div id="background" data-bg="skulls"></div>
 <div class="jumbotron bg-1">
+    <div id="settings" data-bg="lined_paper" data-tag="hellokitty"></div>
     <div class="container" style="color: white;">
         <h1>Hello World!</h1>
-
         <h2>Lets show some Hello Kitty pictures</h2>
     </div>
 </div>
@@ -50,7 +49,7 @@
     <!-- End search form code -->
 
     <hr>
-    <div id="results" class="row" data-tag="hellokitty"></div>
+    <div id="results" class="row">test</div>
     <div>
         <hr>
 
@@ -67,10 +66,10 @@
         $(document).ready(function () {
             $('#results').workshopOne({
                 //First we get the background keyword and pass that on
-                bg: $('#background').data('bg'),
+                bg: $('#settings').data('bg'),
 
                 //If we want to show the feed for a hashtag:
-                hashtag: $('#results').data('tag')
+                hashtag: $('#settings').data('tag')
 
                 //If we want to show the feed of a specific user:
                 //mode: 'user',
