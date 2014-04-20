@@ -69,8 +69,8 @@ function setBackground(settings){
 
     if(settings.bg == "congruent_pentagon"){
         $('html body').css('background-image', 'url(\'' + baseUrl + '/congruent_pentagon.png\')');
-    } else if (settings.bg == "sativa"){
-        $('html body').css('background-image', 'url(\'' + baseUrl + '/sativa.png\')');
+    } else if (settings.bg == "photography"){
+        $('html body').css('background-image', 'url(\'' + baseUrl + '/photography.png\')');
     } else if (settings.bg == "skulls"){
         $('html body').css('background-image', 'url(\'' + baseUrl + '/skulls.png\')');
     } else if (settings.bg == "food"){

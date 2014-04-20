@@ -4,7 +4,7 @@ Feature: As an instructor
 
   Scenario: Student sample code is accessible from homepage
     Given I visit the site
-    And I click "Try out the sample lesson"
+    And I click "Workshop 1"
     Then I should be on the "lesson1" page
 
 

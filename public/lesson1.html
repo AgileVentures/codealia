@@ -1,15 +1,16 @@
 <!doctype html>
 <html>
 <head>
-    <title>HTML Lesson 1</title>
+    <title>Social World part 1</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
 </head>
 <body>
 <div class="jumbotron bg-1">
-    <div id="settings" data-bg="lined_paper" data-tag="hellokitty"></div>
+    <settings data-bg="giftly" data-hashtag="hellokitty"/>
     <div class="container" style="color: white;">
-        <h1>Hello World!</h1>
+        <h1>Hello Social World!</h1>
+
         <h2>Lets show some Hello Kitty pictures</h2>
     </div>
 </div>
@@ -18,20 +19,27 @@
     <h4>Should you accept it - this is your assignment for today: </h4>
     <ol>
         <li>In the code of the page, please find
-            <code>&lt;div id="background" data-bg="skulls"&gt;&lt;/div&gt;</code>
-        and change "skulls" to some other background. You can choose any of these backgrounds and you may change them as
-        many times as you want:
-        <code> sativa, skulls, food, lined_paper, giftly</code> or <code>congruent_pentagon</code> - that's a tricky one!
-        <br />Play around with those backgrounds until you are satisfied.   </li>
-
-        <li>Now find the <code>&lt;div&gt;</code> tag with the text <code>data-tag="hellokitty"</code> in it on the page. Change "hellokitty" to any other word you would like to show pictures about.
+            <code>&lt;settings data-bg="skulls"...&gt;</code>
+            and change "skulls" to some other background. You can choose any of these backgrounds and you may change
+            them as
+            many times as you want:
+            <code> photography, skulls, food, lined_paper, giftly</code> or <code>congruent_pentagon</code> - that's a tricky
+            one!
+            <br/>Play around with those backgrounds until you are satisfied.
         </li>
 
-        <li>Find the <code>&lt;H1&gt;</code> tag on the page. Change the text to how you want to say hello to your visitors.
+        <li>Now, within the <code>&lt;settings&gt;</code> tag, there is another data tag with the text <code>data-tag="hellokitty"</code>
+            in it. Change "hellokitty" to any other word you would like to show pictures about.
         </li>
-        <li>Close to the <code>&lt;H1&gt;</code> tag you'll find a <code>&lt;H2&gt;</code> tag. Make sure that you change that text as well. You don't want to keep "Hello Kitty" or do you?.
+
+        <li>Find the <code>&lt;H1&gt;</code> tag on the page. Change the text to how you want to say hello to your
+            visitors.
         </li>
-        <li>Finally, find the text you are reading right now and delete it or change it to something you want to say to your visitors!
+        <li>Close to the <code>&lt;H1&gt;</code> tag you'll find a <code>&lt;H2&gt;</code> tag. Make sure that you
+            change that text as well. You don't want to keep "Hello Kitty" or do you?.
+        </li>
+        <li>Finally, find the text you are reading right now and delete it or change it to something you want to say to
+            your visitors!
         </li>
     </ol>
     <strong>Don't forget to save your work and always ask your teacher if you feel unsure about what to do!</strong>
@@ -49,7 +57,7 @@
     <!-- End search form code -->
 
     <hr>
-    <div id="results" class="row">test</div>
+    <div id="results" class="row"></div>
     <div>
         <hr>
 
@@ -66,14 +74,16 @@
         $(document).ready(function () {
             $('#results').workshopOne({
                 //First we get the background keyword and pass that on
-                bg: $('#settings').data('bg'),
+                bg: $('settings').data('bg'),
 
                 //If we want to show the feed for a hashtag:
-                hashtag: $('#settings').data('tag')
+                hashtag: $('settings').data('hashtag')
 
                 //If we want to show the feed of a specific user:
                 //mode: 'user',
-                //userID : '1239267164'
+                //userID : '1239267164' //Codealia
+                //userID : '33647687'  //Paris Hilton
+                //hashtag: $('settings').data('hashtag') // Set userID in 'settings'
             });
         });
     </script>

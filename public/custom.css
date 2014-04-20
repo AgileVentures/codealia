@@ -1,14 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Special+Elite|Bangers|Miltonian+Tattoo|Neucha|Pacifico|);
 html body {
     font-family: 'Neucha';
-    /*
-    http://subtlepatterns.com/patterns/congruent_pentagon.png
-    http://subtlepatterns.com/patterns/sativa.png
-    http://subtlepatterns.com/patterns/skulls.png
-    http://subtlepatterns.com/patterns/food.png
-    http://subtlepatterns.com/patterns/lined_paper.png
-    http://subtlepatterns.com/patterns/giftly.png
-    */
     background-image: url('http://subtlepatterns.com/patterns/food.png');
     font-size: 20px;
 
@@ -16,7 +8,7 @@ html body {
 }
 
 .jumbotron h1 { font-family: 'Pacifico';
-    font-size: 6em;
+    font-size: 5em;
     margin-bottom: 0;
     text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;  }
 
