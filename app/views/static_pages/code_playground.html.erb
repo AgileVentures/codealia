@@ -1,19 +1,12 @@
 <%= stylesheet_link_tag 'code-playground', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'code-playground', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'codealia-ide/ide', 'data-turbolinks-track' => true %>
 
-<div style="width: 1200px;">
-  <div class="split-window">
-    <div id="editor">var i = 3;
-log("Hello");
-function countDown() {
-    if (i &gt; 0) {
-        log(i--);
-        setTimeout(countDown, 1000);
-    } else {
-        log("World!");
-    }
-}
-setTimeout(countDown, 1000);</div>
-    <div id="code-output" class="code" ></div>
+<div class="row" ng-app="CodealiaIDE" ng-controller="CodealiaIDEController">
+  <div class="col-xs-6">
+    <div id="editor"></div>
+  </div>
+
+  <div class="col-xs-6">
+    <iframe id="page-preview" src="" frameborder="0"></iframe>
   </div>
 </div>
