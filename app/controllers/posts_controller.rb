@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate, :except => [ :index, :show] # auth bf all methods except index & show
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  # before_action :set_post, only: [:show,  :update, :edit, :destroy] #set post id only for show, edit, update & destroy methods
+  before_action :set_post, :except => [:index, :new, :create]
 
   # GET /posts
   def index

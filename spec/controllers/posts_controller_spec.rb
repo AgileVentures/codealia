@@ -59,9 +59,19 @@ describe PostsController do
       get :new, {}
       assigns(:post).should eq post
     end
-
-
   end
 
+  describe 'GET edit' do
+    before(:each) { http_login('admin', 'secret') }
+    it 'does call the authenticate method' do
+      controller.should_receive(:authenticate)
+      get :edit, {id: '3'}
+    end
+
+    it 'does call the set_post method' do
+      controller.should_receive(:set_post) # calls set_post but then does NOT RUN IT. Should_receive is STUB & ASSERTION
+      get :edit, {id: '10'} #:id => '3'id: '3'
+    end
+  end
 
 end
