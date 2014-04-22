@@ -1,8 +1,12 @@
 <%= stylesheet_link_tag 'code-playground', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'codealia-ide/ide', 'data-turbolinks-track' => true %>
 
-<div class="row" ng-app="CodealiaIDE" ng-controller="CodealiaIDEController">
+<div class="row" ng-app="CodealiaIDE" ng-controller="LessonsController" ng-init="init()">
+  <div class="col-xs-12" ng-view></div>
   <div class="col-xs-6">
+    <ul>
+      <li><a href="#/lessons/{{lessonId}}?tab=HTML" ng-click="setLang('html')">HTML for {{lessonId}}</a></li>
+    </ul>
     <div id="editor"></div>
   </div>
 
