@@ -19,21 +19,23 @@ app.config([ '$routeProvider',
   }
 ]);
 
-app.controller('LessonsController', [ '$scope', '$routeParams',
-  function($scope, $routeParams) {
-    console.log($routeParams);
+app.controller('LessonsController', [ '$rootScope', '$scope', '$routeParams',
+  function($rootScope, $scope, $routeParams) {
+    $rootScope.lessonId = $routeParams.lessonId;
 
-    $scope.generatePreview = function(editor) {
-      $scope.preview.src = 'data:text/html;charset=utf-8,' + editor.getValue();
+    if ($routeParams.mode && $scope.mode !== $routeParams.mode) {
+      $scope.mode = $routeParams.mode;
+      console.log('You chose ' + $routeParams.mode);
     }
 
-    $scope.setLang = function(lang) {
-      console.log(lang);
+    $scope.generatePreview = $scope.generatePreview || function(editor) {
+      $scope.preview.contents().find('body').html(editor.getValue());
     }
 
-    $scope.init = function() {
+    $scope.init = $scope.init || function() {
+      $scope.preview = $('#page-preview');
+
       $scope.editor = ace.edit('editor');
-      $scope.preview = document.getElementById('page-preview');
       var editor = $scope.editor;
 
       editor.setTheme("ace/theme/chrome");
