@@ -1,4 +1,6 @@
 //= require ace/ace
+//= require ace/mode-html
+//= require ace/theme-chrome
 //= require angular.min
 //= require angular-route.min
 
@@ -21,10 +23,11 @@ app.config([ '$routeProvider',
 
 app.controller('LessonsController', [ '$rootScope', '$scope', '$routeParams',
   function($rootScope, $scope, $routeParams) {
-    $rootScope.lessonId = $routeParams.lessonId;
+    $rootScope.lessonId = $routeParams.lessonId || '1';
+    $rootScope.mode = $rootScope.mode || 'HTML';
 
-    if ($routeParams.mode && $scope.mode !== $routeParams.mode) {
-      $scope.mode = $routeParams.mode;
+    if ($routeParams.mode && $rootScope.mode !== $routeParams.mode) {
+      $rootScope.mode = $routeParams.mode;
       console.log('You chose ' + $routeParams.mode);
     }
 
@@ -36,7 +39,7 @@ app.controller('LessonsController', [ '$rootScope', '$scope', '$routeParams',
       $scope.preview = $('#page-preview');
 
       $scope.editor = ace.edit('editor');
-      var editor = $scope.editor;
+      editor = $scope.editor;
 
       editor.setTheme("ace/theme/chrome");
       editor.setFontSize(14);

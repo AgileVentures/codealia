@@ -1,18 +1,24 @@
 <%= stylesheet_link_tag 'code-playground', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'codealia-ide/ide', 'data-turbolinks-track' => true %>
 
-<div class="row" ng-app="CodealiaIDE" ng-controller="LessonsController" ng-init="init()">
-  <div class="col-xs-12" ng-view></div>
-  <div class="col-xs-6">
-    <ul>
-      <li><a href="#/lessons/{{lessonId}}?mode=HTML">HTML for {{lessonId}}</a></li>
-      <li><a href="#/lessons/{{lessonId}}?mode=CSS">CSS for {{lessonId}}</a></li>
-      <li><a href="#/lessons/{{lessonId}}?mode=JS">JS for {{lessonId}}</a></li>
+<div class="container-fluid" ng-app="CodealiaIDE" ng-controller="LessonsController" ng-init="init()">
+  <div class="row" ng-view></div>
+  <div class="row">
+    <ul class="nav nav-pills">
+      <% [ 'HTML', 'CSS', 'JS' ].each do |lang| %>
+        <li ng-class="{active: mode==='<%= lang %>'}">
+          <a href="#/lessons/{{lessonId}}?mode=<%= lang %>"><%= lang %></a>
+        </li>
+      <% end %>
     </ul>
-    <div id="editor"></div>
   </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <div id="editor"></div>
+    </div>
 
-  <div class="col-xs-6">
-    <iframe id="page-preview" src="<%= html_preview_path  %>"></iframe>
+    <div class="col-xs-6">
+      <iframe id="page-preview" src="<%= html_preview_path  %>"></iframe>
+    </div>
   </div>
 </div>
