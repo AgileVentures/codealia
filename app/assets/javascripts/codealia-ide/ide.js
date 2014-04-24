@@ -1,6 +1,11 @@
 //= require ace/ace
 //= require ace/mode-html
+//= require ace/mode-css
+//= require ace/mode-javascript
 //= require ace/theme-chrome
+//= require ace/worker-html
+//= require ace/worker-css
+//= require ace/worker-javascript
 //= require angular.min
 //= require angular-route.min
 
