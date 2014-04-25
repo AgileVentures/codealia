@@ -1,29 +1,22 @@
 require 'spec_helper'
 
 describe "posts/index" do
-  before(:each) do
-    assign(:posts, [
-      stub_model(Post,
-        :title => "Title",
-        :author => "Author",
-        :content => "MyText"
-      ),
-      stub_model(Post,
-        :title => "Title",
-        :author => "Author",
-        :content => "MyText"
-      )
-    ])
-  end
 
-  it "renders a list of posts" do
-    pending "Datetime parse to string question is resolved"
-    # render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    # assert_select "tr>td", :text => "Title".to_s, :count => 2
+    before(:each) do
+      @posts = [
+        stub_model(Post, :title => "First Title", :author => "Author 1", :content => "Content my text 1", :created_at => Time.now),
+        stub_model(Post, :title => "Second Title", :author => "Author 2", :content => "New Post 2 ", :created_at => Time.now )
+      ]
+    end
 
-    # assert_select "div", :text => "Title".to_s, :count => 2
-    # assert_select "tr>td", :text => "Author".to_s, :count => 2
-    # assert_select "tr>td", :text => "MyText".to_s, :count => 2
+  it 'should render a list of posts' do
+    render
+    rendered.should have_selector('div.well')
+      rendered.should have_text('First Title')
+      rendered.should have_text('Second Title')
+      rendered.should have_text('Author 1')
+      rendered.should have_text('Author 2')
+      rendered.should have_text('Content my text 1')
+      rendered.should have_text('New Post 2 ')
   end
 end

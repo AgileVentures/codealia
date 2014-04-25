@@ -3,24 +3,20 @@ require 'spec_helper'
 describe "posts/show" do
 
   before(:each) do
-    @post = assign(:post, stub_model(Post,
-      :title => "Title",
-      :author => "Author",
-      :content => "MyText"
-    ))
+    @post = stub_model(Post, :title => "First Title",:author => "Author 1", :content => "Content my text 1", :created_at => Time.now)
   end
 
-  it "renders attributes in <p>" do
-    pending "How to test parse created_at datetime input into time_ago_in_words "
+  it "should display individual post content" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    # rendered.should match(/Title/)
-    # rendered.should match(/Author/)
-    # rendered.should match(/MyText/)
-
-    endered.should contain('Title')
-    endered.should contain('Author')
-    # endered.should contain('Datetime Parsed') #??? Datetime is changed to text
-    endered.should contain('MyText')
+    rendered.should have_selector('p#notice')
+      rendered.should have_text(@post.title)
+      rendered.should have_text(@post.author)
+      rendered.should have_content("Posted #{time_ago_in_words(@post.created_at)}")
+      rendered.should have_text(@post.content)
+      rendered.should have_link('Edit')
+      rendered.should have_link('Back')   
   end
+
+
+  
 end
