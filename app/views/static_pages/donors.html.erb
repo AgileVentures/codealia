@@ -1,25 +1,30 @@
 <h2><%= @title %></h2>
 <div class="well">
   <div class="pull-right" style="max-width: 50%;margin-left: 30px;">
-    <img class="img-responsive img-thumbnail" src="assets/GirlsPP450.png" width="450" height="367" alt="Girls pair programming">
+    <img class="img-responsive img-thumbnail" src="<%= image_path('GirlsPP450.png') %>" width="450" alt="Girls pair programming">
   </div>
-
-  <p>Codealia has a strong emphasis on working together, co-operation and self-organising teams. With your contibutions Codealia will be able to:</p>
+  <!-- Pictures of team members or 30s video to make donors feel good about sending their money -->
+  <p>Codealia has a strong emphasis on working together, co-operation and
+    self-organising teams. With your contributions Codealia will be able to:</p>
 
   <ul>
     <li>Build out the learning platform.</li>
     <li>Provide hardware and tools to students.</li>
-    <li>Organise venues where sutdent can learn.</li>
+    <li>Organise venues where students can learn.</li>
     <li>Cover travel expenses for tutors and related costs.</li>
   </ul>
 
-  <p>We take an experience based approach in our courses. Based on the behavioral patterns of our target audience, we can achieve a higher level of commitment that creates a good learning atmosphere and leads to better results.</p>
+  <p>We take an experience based approach in our courses. Based on the behavioral
+    patterns of our young girls, we can achieve a higher level of commitment
+    that creates a good learning atmosphere and leads to better results.</p>
 
-  <p>In-kind donations of goods and services to help support our initiative are also welcome.</p>
+  <p>In-kind donations of goods and services to help support our initiative are
+    also welcome.</p>
 
-  <!-- Pending indiegogo campaing launch -->
-  <!-- <p>The learning platform we envisage will require some funding to bring to fruition. To that end we've started a crowd funding campaign on indiegogo.com</p> -->
+  <p>The learning platform we envisage will require some funding to bring to
+    fruition. To that end we've started a crowd funding campaign on
+    <a href="http://igg.me/at/codealia/x">indiegogo.com</a></p>
 
 </div>
 
-<%= link_to 'Back', :back, :class => 'btn btn-danger' %>
+<%= link_to 'Back', :back, :class => 'btn btn-default' %>

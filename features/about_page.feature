@@ -4,10 +4,10 @@ Feature: As a team member,
 
   Scenario: Having the about page
   	Given I visit the site
-  	And I click "About us"
+  	And I click "About Us"
   	Then I should be on the "about" page
 
   Scenario: Participant avatars
   	Given I am on the "about" page
   	# And "Pete" and "Thomas" are contributors
-  	Then I should see avatars for "Pete, Thomas, Bryan, Sampriti"
+  	Then I should see avatars for "Marian, Luchinda, Viv, Pete, Thomas, Sam"

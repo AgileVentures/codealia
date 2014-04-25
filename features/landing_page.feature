@@ -15,5 +15,5 @@ Feature: Create a website
     And I should see link to the "Mentors" page
 
   Scenario: Check for links in footer
-    Then I should see a link "About us" to "about"
+    Then I should see a link "About Us" to "about" page
 
