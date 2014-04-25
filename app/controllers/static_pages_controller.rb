@@ -13,7 +13,11 @@ class StaticPagesController < ApplicationController
   end
 
   def code_playground
-    render template: 'static_pages/code_playground', layout: 'application'
+    render layout: 'layouts/application'
+  end
+
+  def html_preview
+    render layout: false
   end
 
   def instructors
