@@ -74,6 +74,7 @@ class PostsController < ApplicationController
 
     #Must login to create/edit post
     def authenticate
+      # TODO replace with a proper admin login
       authenticate_or_request_with_http_basic do |name, password|
         name == "admin" && password == "secret"
       end
