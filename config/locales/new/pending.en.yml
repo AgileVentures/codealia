@@ -8,7 +8,7 @@ en:
   static_pages:
     index:
       text:
-        learning_code:
+        learning_code_html:
           "
           <h2>Learning Code - Building Futures</h2>
           <h3>An Open Source Solution For Technology Education</h3>
