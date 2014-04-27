@@ -5,7 +5,7 @@ module ActionView
         alias :old_translate :translate
         def translate(key, options = {})
           # display what has been translated
-          "{{ #{old_translate(key, options)} }}"
+          raw "{{ #{old_translate(key, options)} }}"
         end
         alias :t :translate
       end
