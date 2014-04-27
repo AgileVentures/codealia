@@ -24,6 +24,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'launchy'
   gem 'poltergeist'
   gem 'jasmine'

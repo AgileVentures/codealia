@@ -11,20 +11,22 @@
     </div>
   <% end %>
 
+  <% i18n_path = 'activerecord.attributes.post' %>
+
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, t("#{i18n_path}.title") %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :author %><br>
+    <%= f.label :author, t("#{i18n_path}.author") %><br>
     <%= f.text_field :author %>
   </div>
   <div class="field">
-    <%= f.label :created_at %><br>
+    <%= f.label :created_at, t("#{i18n_path}.created_at") %><br>
     <%= f.datetime_select :created_at %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
+    <%= f.label :content, t("#{i18n_path}.content") %><br>
     <%= f.text_area :content %>
   </div>
   <div class="actions">
