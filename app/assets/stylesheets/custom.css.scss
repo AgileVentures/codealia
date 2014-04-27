@@ -1,7 +1,7 @@
 @import "shared";
 
 .translation_missing {
-  color: red;
-  text-transform: uppercase;
-  text-decoration: line-through;
+  color: red !important;
+  text-transform: uppercase !important;
+  text-decoration: line-through !important;
 }

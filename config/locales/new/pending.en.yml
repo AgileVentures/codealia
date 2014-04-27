@@ -3,6 +3,8 @@ en:
     navbar:
       links:
         concept_draft: "Concept draft"
+        switch_to_EN: "EN"
+        switch_to_SE: "SE"
   static_pages:
     index:
       text:
@@ -21,3 +23,17 @@ en:
           collaboration, teamwork and open communication which will pave
           the way to future careers in the information technology field.</p>
           "
+  activerecord:
+    models:
+      post:
+        one: "Post"
+        other: "Posts"
+    errors:
+      messages:
+        blank: "%{attribute} cannot be blank"
+    attributes:
+      post:
+        title: "Title"
+        author: "Author"
+        content: "Content"
+        created_at: "Created at"

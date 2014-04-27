@@ -1,8 +1,3 @@
 se:
   app:
     title: "Codealia"
-  layouts:
-    navbar:
-      links:
-        switch_to_EN: "EN"
-        switch_to_SE: "SE"
