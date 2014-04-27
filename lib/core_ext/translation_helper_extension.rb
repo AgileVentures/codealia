@@ -1,7 +1,7 @@
 module ActionView
   module Helpers
     module TranslationHelper
-      if Rails.env.development?
+      unless Rails.env.production?
         alias :old_translate :translate
         def translate(key, options = {})
           # display what has been translated
