@@ -4,7 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
 
-  unless Rails.env.test?
+  # TODO switch to this conditional when the site is
+  # translated properly
+  # unless Rails.env.test?
+  if Rails.env.development?
     def default_url_options(options = {})
       { locale: I18n.locale }
     end
@@ -13,6 +16,10 @@ class ApplicationController < ActionController::Base
   private
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    # TODO remove the conditional when the site is
+    # translated properly
+    unless Rails.env.production?
+      I18n.locale = params[:locale] || I18n.default_locale
+    end
   end
 end
