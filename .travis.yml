@@ -1,5 +1,6 @@
 language: ruby
 rvm:
+- rvm 2.1.0 do rvm gemset create
 - 2.1.0
 before_install:
   - gem install bundler
