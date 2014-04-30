@@ -1,35 +1,34 @@
 <!doctype html>
 <html>
 <head>
-    <title>Social World part 1</title>
+    <title>Social World</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
 </head>
 <body>
 <div class="jumbotron bg-1">
-    <settings data-bg="giftly" data-hashtag="batman"/>
+    <settings data-bg="giftly" data-user="1239267164"/>
     <div class="container" style="color: white;">
         <h1>Hello Social World!</h1>
 
-        <h2>Lets show some Hello Kitty pictures</h2>
+        <h2>Lets show some pictures</h2>
     </div>
 </div>
 <div class="container">
 
-    <h4>Should you accept it - this is your assignment for today: </h4>
+    <h4>Let's dive into the code - this is your main assignment for today: </h4>
     <ol>
         <li>In the code of the page, please find
             <code>&lt;settings data-bg="skulls"...&gt;</code>
             and change "skulls" to some other background. You can choose any of these backgrounds and you may change
-            them as
-            many times as you want:
+            them as many times as you want:
             <code> photography, skulls, food, lined_paper, giftly</code> or <code>congruent_pentagon</code> - that's a tricky
             one!
             <br/>Play around with those backgrounds until you are satisfied.
         </li>
 
-        <li>Now, within the <code>&lt;settings&gt;</code> tag, there is another data tag with the text <code>data-tag="hellokitty"</code>
-            in it. Change "hellokitty" to any other word you would like to show pictures about.
+        <li>Now, within the <code>&lt;settings&gt;</code> tag, there is another data tag with the text <code>data-user="1239267164"</code>
+            in it. Change "1239267164" to the number you got on when searching for the user feed you want to display.
         </li>
 
         <li>Find the <code>&lt;H1&gt;</code> tag on the page. Change the text to how you want to say hello to your
@@ -60,9 +59,8 @@
     <div id="results" class="row"></div>
     <div>
         <hr>
-
         <footer>
-            <small>Licenced under the Creative Commons Licence Codealia.org 2014</small>
+            <small>Codealia.org - Passions Workshop 2 Licenced under the Creative Commons Licence Codealia.org 2014</small>
         </footer>
     </div>
     <!-- Scripts - needs to be included -->
@@ -77,13 +75,12 @@
                 bg: $('settings').data('bg'),
 
                 //If we want to show the feed for a hashtag:
-                hashtag: $('settings').data('hashtag')
-
+                //hashtag: $('settings').data('hashtag'),
+                mode: 'user',
+                userID: $('settings').data('user')
                 //If we want to show the feed of a specific user:
-                //mode: 'user',
                 //userID : '1239267164' //Codealia
                 //userID : '33647687'  //Paris Hilton
-                //hashtag: $('settings').data('hashtag') // Set userID in 'settings'
             });
         });
     </script>

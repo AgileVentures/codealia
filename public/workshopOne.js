@@ -40,7 +40,9 @@ function instagramFetch(settings){
 	var access_token = settings.accessToken;
 	var client_id = settings.clientId;
   	var param = {client_id:client_id};
-    fetchCMD(param, settings);
+    if( settings.call != 'usersearch' ) {
+        fetchCMD(param, settings);
+    }
     setBackground(settings);
 }
 
@@ -80,11 +82,11 @@ function setBackground(settings){
     } else if (settings.bg == "giftly"){
         $('html body').css('background-image', 'url(\'' + baseUrl + '/giftly.png\')');
     } else {
-        alert('No valid keyword');
+        //alert('No valid keyword');
+        $('html body').css('background-image', 'url(\'' + baseUrl + '/giftly.png\')');
     }
     $document.body.style.background
 }
-
 
 /* Instagram Tag Search
 ------------------------------*/
@@ -102,16 +104,64 @@ function instagramSearch(settings){
 
 function searchCMD(param, settings, searchQuery){
 
-	var cmdURL = "";
 
 	// Tag Search
-	cmdURL = 'https://api.instagram.com/v1/tags/' + searchQuery + '/media/recent?callback=?';
+	var cmdURL = 'https://api.instagram.com/v1/tags/' + searchQuery + '/media/recent?callback=?';
 
    	$.getJSON(cmdURL, param, function(data){
 		onPhotoLoaded(data, settings);
 	});
 
 }
+
+/* Instagram User Search
+ ------------------------------*/
+function instagramUserSearch(settings){
+    var access_token = settings.accessToken;
+    var searchQuery = $(".searchBox").val().replace(/ /g,'');
+    var param = {access_token:access_token,q:searchQuery};
+
+    userSearchCMD(param, settings);
+}
+
+function userSearchCMD(param, settings){
+    var cmdURL = 'https://api.instagram.com/v1/users/search?callback=?';
+
+    $.getJSON(cmdURL, param, function(data){
+        onUserLoaded(data, settings);
+    });
+}
+
+function onUserLoaded(data, settings){
+    if( data.meta.code == 200 ){
+        var users = data.data;
+         console.log(data);
+
+        if( users.length > 0 ){
+            for( var key in users ){
+                // Build UI
+                var user = users[key];
+                var instagramUser = '';
+
+                instagramUser = '<div class="container"';
+                instagramUser +=    '<div class="media" id="p' + user.id + '" title="' + user.username + '" rel="' + user.id + '">' ;
+                instagramUser += 	    '<a class="pull-left" href="#" style="margin-right: 20px;"><img class="media-object thumbnail" src="' + user.profile_picture + '" style="width: 100px;" /></a>';
+                instagramUser +=    '<div class="media-body">';
+                instagramUser += 	    '<h3 class="media-heading">' + user.username + '</h3>';
+                instagramUser += 	    '<p>' + user.full_name + '</p>';
+                instagramUser += 	    '<h3 class="media-heading">User ID: ' + user.id + '</h3>';
+                instagramUser +=    '</div>';
+                instagramUser += '</div>';
+
+                $(instagramUser).appendTo($('#results'));
+
+            }
+        } else {
+            $(instagramUser).appendTo('No results :-(');
+        }
+    }
+}
+
 
 
 
@@ -189,7 +239,7 @@ function onPhotoLoaded(data, settings){
 			});
 
         } else {
-            alert('empty');
+            alert('No search results');
         }
 
     } else {
@@ -230,7 +280,7 @@ $.fn.workshopOne = function ( options ) {
 			ibObj.html("");
 
 			// Detect if the input has user rel or tag rel and use different methods for each...
-			if( $(settings.searchBox).attr("rel") == "user" ){
+			if( $('.searchInstagram').attr("rel") == "user" ){
 				instagramUserSearch(settings);
 			} else {
 				instagramSearch(settings);

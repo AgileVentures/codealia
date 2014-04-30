@@ -5,7 +5,10 @@ Codealia::Application.routes.draw do
   get '/donors', to: 'static_pages#donors', as: 'donors'
   get '/mentors', to: 'static_pages#mentors', as: 'mentors'
   get '/developers', to: 'static_pages#developers', as: 'developers'
-  get '/lesson1', to: redirect('public/lesson1.html'), as: 'lesson1'
+  get '/ws1', to: 'workshops#workshop1', as: 'ws1'
+  get '/ws2', to: 'workshops#workshop2', as: 'ws2'
+  get '/ws2-1', to: redirect('public/ws2-1.html'), as: 'ws2part1'
+  get '/ws2-2', to: redirect('public/ws2-2.html'), as: 'ws2part2'
 
   get '/legal/terms_and_conditions', to: 'static_pages#terms_and_conditions', as: 'terms_and_conditions'
   get '/html-preview', to: 'static_pages#html_preview', as: 'html_preview'
