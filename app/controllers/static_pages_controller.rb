@@ -16,6 +16,10 @@ class StaticPagesController < ApplicationController
     render layout: 'layouts/application'
   end
 
+  def html_preview
+    render layout: false
+  end
+
   def instructors
     @title = 'Instructors'
   end
