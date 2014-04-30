@@ -5,6 +5,16 @@ module ApplicationHelper
     self.output_buffer = ActionView::OutputBuffer.new(output)
   end
 
+  def language_switch_link
+    locale = (params[:locale] == 'se' ? :en : :se)
+    text_for_locale = {
+      en: t('layouts.navbar.links.switch_to_EN'),
+      se: t('layouts.navbar.links.switch_to_SE'),    }
+    raw <<-HTML
+      <li>#{link_to(text_for_locale[locale], root_url(locale: locale))}</li>
+    HTML
+  end
+
   def shared_meta_keywords
     'Codealia, Coding for Girls, Women in Technology, Coding for Kids'
   end
