@@ -8,6 +8,10 @@
     <a class="navbar-brand" href="<%= root_path %>">codealia.org</a>
   </div>
   <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><%= link_to 'Workshop 1', ws1_path %></li>
+      <li><%= link_to 'Workshop 2', ws2_path %></li>
+    </ul>
     <ul class="nav navbar-nav pull-right">
       <%= language_switch_link unless Rails.env.production? %>
       <li class="active"><a href="#"><%= t('layouts.navbar.links.concept_draft') %></a></li>
