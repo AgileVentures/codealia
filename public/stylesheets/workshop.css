@@ -5,7 +5,7 @@ body {
 }
 /* style for lists and paragraphs p li ol ul inherit from body */
 h1 {
-    font-size: 50px;
+    font-size: 14pt;
 }
 h2 {
     font-size: 40px;
@@ -23,3 +23,12 @@ h2 {
     background-color: AntiqueWhite;
 }
 
+/* LAYOUT */
+header, footer {
+  background-color: rgba(244, 156, 21, 0.6);
+  border: 3px solid red;
+  padding: 0 22px;
+}
+header {
+  border-radius: 18px 18px 0 0;
+}
