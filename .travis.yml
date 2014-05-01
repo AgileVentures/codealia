@@ -27,3 +27,4 @@ notifications:
   email:
     - info@agileventures.org
     - pete@agileventures.org
+  slack: agileventures:rrYJqr9AZI1QoZUP0hvIdzxx
