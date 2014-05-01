@@ -25,10 +25,19 @@ h2 {
 
 /* LAYOUT */
 header, footer {
-  background-color: rgba(244, 156, 21, 0.6);
+  background-color: rgba(244, 156, 21, 0.6); /* Codealia transparent orange */
   border: 3px solid red;
-  padding: 0 22px;
+  padding: 0 22px; /* no padding top and bottom, 22px left and right */
 }
 header {
-  border-radius: 18px 18px 0 0;
+  border-radius: 18px 18px 0 0; /* rounded corners top-feft and top right */
+}
+footer {
+  font-size: 8pt;
+}
+article {
+  width: 600px;
+}
+section {
+  width: 50%;
 }
