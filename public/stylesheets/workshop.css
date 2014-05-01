@@ -17,19 +17,18 @@ p {
 }
 
 /* COLOURS */
-.DeepPink {
+.pink {
     color: DeepPink;
 }
-.DarkOrange {
+.orange {
     color: DarkOrange;
 }
-.LavenderBG {
-    background-color: Lavender;
-}
-.AntiqueBG {
-    background-color: AntiqueWhite;
-}
+.bg-white { background-color: #fff; }
+.bg-pink { background-color: #f4cccc; }
+.bg-orange { background-color: #f9cb9c; }
+.bg-yellow { background-color: #ffe599; }
 .bg-green { background-color: #b6d7a8; }
+.bg-blue { background-color: #a4c2f4; }
 .bg-violet { background-color: #d9d2e9; }
 
 /* LAYOUT */
