@@ -7,10 +7,7 @@ Feature: As an instructor
     And I click "Workshop 1"
     Then I should be on the "ws1" page
 
-  Scenario: Student visits code playground in ws1
-    Given I am on the "ws1" page
-    And I click "Code Playground"
-    # Then I should see "Lesson 1"
+  # TODO: insert Scenario for workshop1 steps
 
   Scenario: Student ws2 sample code is accessible from homepage
     Given I visit the site
