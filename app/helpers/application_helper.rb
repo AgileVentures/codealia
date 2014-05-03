@@ -15,6 +15,13 @@ module ApplicationHelper
     HTML
   end
 
+  def workshop_path(workshop, part)
+    workshop_id = "workshop-#{workshop}"
+    part_id = (part.to_s == 'intro' ? 'intro' : "part-#{part}")
+    url_for(action: :show, controller: :learning,
+            workshop_id: workshop_id, part_id: part_id)
+  end
+
   def shared_meta_keywords
     'Codealia, Coding for Girls, Women in Technology, Coding for Kids'
   end
