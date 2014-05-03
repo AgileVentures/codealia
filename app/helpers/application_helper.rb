@@ -17,7 +17,7 @@ module ApplicationHelper
 
   def workshop_path(workshop, part)
     workshop_id = "workshop-#{workshop}"
-    part_id = (part.to_s == 'intro' ? 'intro' : "part-#{part}")
+    part_id = (part.to_s.match(/\d+/) ? "part-#{part}" : part)
     url_for(action: :show, controller: :learning,
             workshop_id: workshop_id, part_id: part_id)
   end

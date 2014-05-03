@@ -1,4 +1,7 @@
-<h2><%= @title %></h2>
+<% title = t('learning.workshop-1.heading.title') %>
+<% provide(:title, title) %>
+
+<h2><%= title %></h2>
 <div class="well">
   <h3>"Your first site"</h3>
   <p>In the Passion part of the curriculum we focus mainly on
@@ -21,6 +24,4 @@
   <ul>
     <li><%= link_to 'Code Playground', code_playground_path %></li>
   </ul>
-
-
 </div>

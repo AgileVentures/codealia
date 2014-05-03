@@ -11,7 +11,6 @@ Codealia::Application.routes.draw do
   get '/donors', to: 'static_pages#donors', as: 'donors'
   get '/mentors', to: 'static_pages#mentors', as: 'mentors'
   get '/developers', to: 'static_pages#developers', as: 'developers'
-  get '/ws1', to: 'workshops#workshop1', as: 'ws1'
 
   get '/learning/:workshop_id', to: 'learning#show'
   get '/learning/:workshop_id/:part_id', to: 'learning#show'

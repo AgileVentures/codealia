@@ -6,6 +6,9 @@ en:
         switch_to_EN: "EN"
         switch_to_SE: "SE"
   learning:
+    workshop-1:
+      heading:
+        title: "Passions Workshop 1"
     workshop-2:
       heading:
         title: "Passions Workshop 2"
