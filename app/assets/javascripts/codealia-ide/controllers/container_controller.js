@@ -2,32 +2,36 @@ CodealiaApp.controller("ContainerController", ["$scope",
   function($scope) {
     $scope.editors = [];
 
+    $scope.generatePreview = function() {
+      if ($scope.preview && $scope.editor) {
+        $scope.preview.html($scope.editor.getValue());
+      }
+    }
+
     this.setEditor = function(editorScope, element, attrs) {
-      $scope.editorPanel = editorScope;
+      $scope.editor = ace.edit(element.find("#passions-editor")[0]);
+      editor = $scope.editor;
+
+      editor.setTheme("ace/theme/chrome");
+      editor.setFontSize(14);
+      editor.getSession().setMode("ace/mode/html");
+      editor.setHighlightActiveLine(false);
+      editor.setShowPrintMargin(false);
+
+      editor.getSession().on("change", $scope.generatePreview);
+
+      console.log("Made editor");
+      if ($scope.preview) {
+        editor.setValue($scope.preview.html());
+      }
     }
 
     this.makeEditable = function(scope, element, attrs) {
-        scope.preview = $("#page-preview");
+      $scope.preview = element;
 
-        scope.editor = ace.edit("editor");
-        editor = $scope.editor;
-
-        editor.setTheme("ace/theme/chrome");
-        editor.setFontSize(14);
-        editor.getSession().setMode("ace/mode/html");
-        editor.setHighlightActiveLine(false);
-        editor.setShowPrintMargin(false);
-        editor.commands.addCommand({
-            name: "preview",
-            bindKey: {
-                win: "Shift-Enter",
-                mac: "Shift-Enter"
-            },
-            exec: scope.generatePreview
-        });
-
-        editor.getSession().on("change", function(e) {
-            scope.generatePreview(editor);
-        });
+      console.log("Made editable");
+      if ($scope.editor) {
+        $scope.editor.setValue($scope.preview.html());
+      }
     }
 }]);

@@ -19,9 +19,5 @@ CodealiaApp.controller("LessonsController", [ "$rootScope", "$scope", "$routePar
     $scope.generatePreview = $scope.generatePreview || function(editor) {
       $scope.preview.contents().find("body").html(editor.getValue());
     }
-
-    $scope.init = $scope.init || function() {
-
-    }
   }
 ]);
