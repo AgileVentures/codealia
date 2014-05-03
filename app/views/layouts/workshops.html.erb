@@ -6,9 +6,12 @@
   <link href="/custom.css" rel="stylesheet">
   <%= javascript_include_tag 'workshops', 'data-turbolinks-track' => true %>
 </head>
-<body>
+<body ng-app="Codealia">
 
-<%= yield %>
+<div cdl-container>
+  <%= yield %>
+  <div cdl-passions-editor></div>
+</div>
 
 </body>
 </html>
