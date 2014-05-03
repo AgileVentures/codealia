@@ -9,10 +9,6 @@ def path_to(page_name, id = '')
       developers_path
     when 'mentors' then
       mentors_path
-    when 'ws1' then
-      ws1_path
-    when 'ws2' then
-      ws2_path
     else
       pending
   end

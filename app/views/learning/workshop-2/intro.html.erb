@@ -1,7 +1,8 @@
+<% i18n_path = 'learning.workshop-2.intro' %>
+<% title = t("learning.workshop-2.heading.title") %>
+<% provide(:title, title) %>
 
-
-
-<h2><%= @title %></h2>
+<h2><%= title %></h2>
 <div class="well">
 
   <h3>"Hello Social World"</h3>
@@ -21,9 +22,9 @@
 
   <h4>Resources:</h4>
   <ul>
-    <li><%= link_to 'ws2-1.html', ws2part1_path %>
+    <li><%= link_to t("#{i18n_path}.links.part", number: 1), workshop_path(2, 1) %>
       - Instagram API interface to search for user profile and return a instagram userID</li>
-    <li><%= link_to 'ws2-2.html', ws2part2_path %>
+    <li><%= link_to t("#{i18n_path}.links.part", number: 2), workshop_path(2, 2) %>
       - The main interface for students to work on. </li>
   </ul>
 

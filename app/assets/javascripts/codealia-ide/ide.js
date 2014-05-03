@@ -1,3 +1,4 @@
+//= require jquery
 //= require ace/ace
 //= require ace/worker-html
 //= require ace/mode-html
