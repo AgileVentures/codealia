@@ -5,7 +5,7 @@ CodealiaApp.directive("cdlPassionsEditor", function() {
     templateUrl: "/angular-app/templates/passions-editor",
     controller: "EditorsController",
     link: function(scope, element, attrs, container) {
-      container.setEditorController(scope);
+      container.setEditor(scope, element, attrs);
     }
   }
 });
