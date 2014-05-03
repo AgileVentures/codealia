@@ -2,7 +2,7 @@ Codealia::Application.routes.draw do
 
   scope :blog do
     resources :posts do
-      resources :comments, :only => [:create]
+      resources :comments, only: [ :create ]
     end
   end
 
