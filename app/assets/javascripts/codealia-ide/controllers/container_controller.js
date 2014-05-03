@@ -20,7 +20,6 @@ CodealiaApp.controller("ContainerController", ["$scope",
 
       editor.getSession().on("change", $scope.generatePreview);
 
-      console.log("Made editor");
       if ($scope.preview) {
         editor.setValue($scope.preview.html());
       }
@@ -29,7 +28,6 @@ CodealiaApp.controller("ContainerController", ["$scope",
     this.makeEditable = function(scope, element, attrs) {
       $scope.preview = element;
 
-      console.log("Made editable");
       if ($scope.editor) {
         $scope.editor.setValue($scope.preview.html());
       }
