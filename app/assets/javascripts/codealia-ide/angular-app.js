@@ -16,14 +16,6 @@ window.CodealiaApp = angular.module("Codealia", [ "ngRoute" ]);
 
 CodealiaApp.controller("LessonsController", [ "$rootScope", "$scope", "$routeParams",
   function($rootScope, $scope, $routeParams) {
-    $rootScope.lessonId = $routeParams.lessonId || "1";
-    $rootScope.mode = $rootScope.mode || "HTML";
-
-    if ($routeParams.mode && $rootScope.mode !== $routeParams.mode) {
-      $rootScope.mode = $routeParams.mode;
-      console.log("You chose " + $routeParams.mode);
-    }
-
     $scope.generatePreview = $scope.generatePreview || function(editor) {
       $scope.preview.contents().find("body").html(editor.getValue());
     }
