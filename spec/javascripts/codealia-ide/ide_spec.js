@@ -1,11 +1,10 @@
 describe("Codealia's awesome in-browser IDE", function() {
-  var scope, rootScope, controller;
+  var scope, controller;
 
-  beforeEach(module('CodealiaIDE'));
+  beforeEach(module('Codealia'));
   beforeEach(inject(function($controller) {
-    rootScope = {};
     scope = {};
-    controller = $controller('LessonsController', { $rootScope: rootScope, $scope: scope });
+    controller = $controller('ContainerController', { $scope: scope });
   }));
 
   it('should have the editor initially undefined', function() {
