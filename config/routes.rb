@@ -6,7 +6,7 @@ Codealia::Application.routes.draw do
     end
   end
 
-  get '/angular-app/templates/*template_name', to: 'templates#get_template'
+  get '/templates/*template_name', to: 'templates#get_template'
 
   root 'static_pages#index'
   get '/about', to: 'static_pages#about', as: 'about'
