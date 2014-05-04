@@ -10,11 +10,3 @@
 //= require_tree .
 
 window.CodealiaApp = angular.module("Codealia", [ "ngRoute" ]);
-
-CodealiaApp.controller("LessonsController", [ "$rootScope", "$scope", "$routeParams",
-  function($rootScope, $scope, $routeParams) {
-    $scope.generatePreview = $scope.generatePreview || function(editor) {
-      $scope.preview.contents().find("body").html(editor.getValue());
-    }
-  }
-]);
