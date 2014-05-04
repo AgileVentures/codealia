@@ -21,5 +21,4 @@ Codealia::Application.routes.draw do
   get '/html-preview', to: 'static_pages#html_preview', as: 'html_preview'
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
-  get '/code-playground', to: 'static_pages#code_playground', as: 'code_playground'
 end
