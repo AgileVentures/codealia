@@ -21,6 +21,29 @@ describe('ContainerController', function() {
     });
   });
 
+  describe("setEditor()", function() {
+    var aceSpy;
+
+    beforeEach(function() {
+      aceSpy = spyOn(ace, "edit").and.callThrough();
+      controller.setEditor(scope, element.parent());
+    });
+
+    it("should set the editor attribute on the scope object", function() {
+      expect(scope.editor).toBeDefined();
+    });
+
+    it("should call ace.edit with the #passions-editor element", function() {
+      expect(aceSpy).toHaveBeenCalledWith(element[0]);
+    });
+
+    it("should register $scope.generatePreview to the on change event", function() {
+      var onEventSpy = spyOn(scope.editor.getSession(), "on");
+      scope.initializeEditor();
+      expect(onEventSpy).toHaveBeenCalledWith("change", scope.generatePreview);
+    });
+  });
+
   it('sets html in the preview if a preview and editor are defined', function() {
     var htmlSpy = spyOn(scope.preview, 'html');
   });

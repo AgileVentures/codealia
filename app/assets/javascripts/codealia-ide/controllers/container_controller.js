@@ -8,8 +8,7 @@ CodealiaApp.controller("ContainerController", ["$scope",
       }
     }
 
-    this.setEditor = function(editorScope, element, attrs) {
-      $scope.editor = ace.edit(element.find("#passions-editor")[0]);
+    $scope.initializeEditor = function() {
       editor = $scope.editor;
 
       editor.setTheme("ace/theme/chrome");
@@ -19,6 +18,11 @@ CodealiaApp.controller("ContainerController", ["$scope",
       editor.setShowPrintMargin(false);
 
       editor.getSession().on("change", $scope.generatePreview);
+    }
+
+    this.setEditor = function(scope, element, attrs) {
+      $scope.editor = ace.edit(element.find("#passions-editor")[0]);
+      $scope.initializeEditor();
 
       if ($scope.preview) {
         editor.setValue($scope.preview.html());
