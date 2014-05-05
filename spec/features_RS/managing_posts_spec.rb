@@ -24,8 +24,11 @@ feature 'Managing blog posts' do
 
   context 'with an existing blog post' do
     background do
-      @post = Post.create(title: 'Codealia Blog Post',
-        author: 'Person', content: 'Learning Code')
+      @post = Post.create(
+        title: 'Codealia Blog Post',
+        author: 'Person',
+        content: 'Learning Code'
+      )
     end
 
     scenario 'Editing an existing post' do
