@@ -1,45 +1,25 @@
-body {
-  // overflow: hidden; prevents scrolling on landing page
-}
+@import "shared";
 
-.code {
-  font-size: 14px;
-  font-family: monospace;
+$height: 400px;
+
+#page-preview {
+  width: 93%;
+  height: 300px;
+  margin: 20px 50px;
+  background-color: white;
+  border: 1px solid black;
 }
 
 #editor {
   width: 100%;
-  height: 300px;
-  margin: 20px 50px;
+  height: $height;
   padding: 10px;
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
+  border: 1px solid $black;
 }
 
-#code-output {
+#page-preview {
   width: 100%;
-  height: 200px;
-  margin: 20px 50px;
-  padding: 10px;
-  background-color: white;
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  overflow: scroll;
-}
-
-#code-output::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
-}
-
-#code-output::-webkit-scrollbar-track { }
-
-#code-output::-webkit-scrollbar-thumb {
-  background: #333;
-}
-
-.split-window {
-  width: 45%;
+  height: $height;
+  background: white;
+  border: 1px solid $black;
 }

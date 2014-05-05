@@ -1,3 +1,6 @@
+<title><%= content_for?(:title) ? yield(:title) : t('app.title') %></title>
+<%= csrf_meta_tags %>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,19 +15,23 @@
 <meta name="distribution" content="Global">
 <meta name="application-name" content="Codealia Official Website">
 
-<meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'Codealia' %>">
+<% social_title = content_for?(:title) ? yield(:title) : 'Codealia' %>
+<% social_url = request.original_url %>
+<% social_description = content_for?(:description) ? yield(:description) : default_meta_description %>
+
+<meta property="og:title" content="<%= social_title %>">
 <meta property="og:type" content="website">
-<meta property="og:url" content="<%= request.original_url %>">
+<meta property="og:url" content="<%= social_url %>">
 <meta property="og:site_name" content="Codealia">
-<meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : default_meta_description %>">
+<meta property="og:description" content="<%= social_description %>">
 <meta property="og:image" content="<%= image_url 'codealia-logo.png' %>">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'Codealia' %>">
-<meta name="twitter:url" content="<%= request.original_url %>">
+<meta name="twitter:title" content="<%= social_title %>">
+<meta name="twitter:url" content="<%= social_url %>">
 <meta name="twitter:site" content="@Codealia">
 <meta name="twitter:image:src" content="<%= image_url 'codealia-logo.png' %>">
 <% if content_for?(:twitter_creator) %>
   <meta name="twitter:creator" content="<%= yield(:twitter_creator) %>">
 <% end %>
-<meta name="twitter:description" content="<%= content_for?(:description) ? yield(:description) : default_meta_description %>">
+<meta name="twitter:description" content="<%= social_description %>">

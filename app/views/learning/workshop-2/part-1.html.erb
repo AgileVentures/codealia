@@ -1,0 +1,44 @@
+<% provide(:title, 'Instagram UserName to UserID') %>
+
+<div class="container">
+    <h1 style="color: white;">Passions - Workshop 2</h1>
+
+    <h4>Let's start with getting a Instagram user ID: </h4>
+    <ol>
+        <li>Enter your instagram username in the field below to lookup your id.</li>
+        <li><strong>Make a note of that number.</strong>
+            You are going to need it to master your main assignment for this workshop!</li>
+    </ol>
+    <!-- Comment or uncomment this section if you want to display a search form-->
+    <div class="row form-group searchContainer">
+        <div class="col-sm-3">
+            <input class="searchBox form-control" placeholder="Search">
+        </div>
+        <div class="col-sm-2">
+            <button class="searchInstagram btn btn-default" rel="user">Search</button>
+        </div>
+        <div id="searchMessage"></div>
+    </div>
+    <!-- End search form code -->
+
+    <!-- This is where all the incoming output will be rendered by js -->
+    <div id="results" class="row"></div>
+    <!-- End of results -->
+
+
+    <div>
+        <hr>
+        <footer>
+            <small>Codealia.org - Passions Workshop 2 Licenced under the Creative Commons Licence Codealia.org 2014
+            </small>
+        </footer>
+    </div>
+</div>
+<script src="/workshopOne.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#results').workshopOne({call: 'usersearch'}
+        );
+    });
+</script>

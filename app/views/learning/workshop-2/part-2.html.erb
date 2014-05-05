@@ -1,0 +1,79 @@
+<%= provide(:title, 'Social World') %>
+
+<div class="jumbotron bg-1">
+  <settings data-bg="giftly" data-user="1239267164"/>
+  <div class="container" style="color: white;">
+    <h1>Hello Social World!</h1>
+
+    <h2>Lets show some pictures</h2>
+  </div>
+</div>
+<div class="container">
+    <h4>Let's dive into the code - this is your main assignment for today: </h4>
+    <ol>
+        <li>In the code of the page, please find
+            <code>&lt;settings data-bg="skulls"...&gt;</code>
+            and change "skulls" to some other background. You can choose any of these backgrounds and you may change
+            them as many times as you want:
+            <code> photography, skulls, food, lined_paper, giftly</code> or <code>congruent_pentagon</code> - that's a tricky
+            one!
+            <br/>Play around with those backgrounds until you are satisfied.
+        </li>
+
+        <li>Now, within the <code>&lt;settings&gt;</code> tag, there is another data tag with the text <code>data-user="1239267164"</code>
+            in it. Change "1239267164" to the number you got on when searching for the user feed you want to display.
+        </li>
+
+        <li>Find the <code>&lt;H1&gt;</code> tag on the page. Change the text to how you want to say hello to your
+            visitors.
+        </li>
+        <li>Close to the <code>&lt;H1&gt;</code> tag you'll find a <code>&lt;H2&gt;</code> tag. Make sure that you
+            change that text as well. You don't want to keep "Hello Kitty" or do you?.
+        </li>
+        <li>Finally, find the text you are reading right now and delete it or change it to something you want to say to
+            your visitors!
+        </li>
+    </ol>
+    <strong>Don't forget to save your work and always ask your teacher if you feel unsure about what to do!</strong>
+    <hr>
+    <!-- Comment or uncomment this section if you want to display a search form-->
+    <div class="row form-group searchContainer">
+        <div class="col-sm-3">
+            <input class="searchBox form-control" placeholder="Search">
+        </div>
+        <div class="col-sm-2">
+            <button class="searchInstagram btn btn-default" rel="tag">Search</button>
+        </div>
+        <div id="searchMessage"></div>
+    </div>
+    <!-- End search form code -->
+
+    <hr>
+    <div id="results" class="row"></div>
+    <div>
+        <hr>
+        <footer>
+            <small>Codealia.org - Passions Workshop 2 Licenced under the Creative Commons Licence Codealia.org 2014</small>
+        </footer>
+    </div>
+    <!-- Scripts - needs to be included -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script src="/workshopOne.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#results').workshopOne({
+                //First we get the background keyword and pass that on
+                bg: $('settings').data('bg'),
+
+                //If we want to show the feed for a hashtag:
+                //hashtag: $('settings').data('hashtag'),
+                mode: 'user',
+                userID: $('settings').data('user')
+                //If we want to show the feed of a specific user:
+                //userID : '1239267164' //Codealia
+                //userID : '33647687'  //Paris Hilton
+            });
+        });
+    </script>

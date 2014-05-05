@@ -1,0 +1,27 @@
+<% title = t('learning.workshop-1.heading.title') %>
+<% provide(:title, title) %>
+
+<h2><%= title %></h2>
+<div class="well">
+  <h3>"Your first site"</h3>
+  <p>In the Passion part of the curriculum we focus mainly on
+    experiencing the possibilities of web applications and getting
+    the kids acquainted with pair programming, presentation skills, etc.</p>
+
+  <p>In WS1 we want... </p>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Workshop 1 (90 mins)</li>
+    <li>Instructors: 2</li>
+    <li>Students: 4 - 10 pairs</li>
+  </ul>
+
+  <h4>Resources:</h4>
+  <textarea name='html' class="sample_code">
+    <%= html_escape render('layouts/ws1_scaffold') %>
+  </textarea>
+  <ul>
+    <li><%= link_to 'Code Playground', code_playground_path %></li>
+  </ul>
+</div>
