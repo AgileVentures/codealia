@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.1.0
+- 2.1.1
 before_install:
   - gem install bundler
   - "export DISPLAY=:99.0"
@@ -27,3 +27,4 @@ notifications:
   email:
     - info@agileventures.org
     - pete@agileventures.org
+  slack: agileventures:rrYJqr9AZI1QoZUP0hvIdzxx

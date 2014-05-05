@@ -1,0 +1,66 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+body {
+    font-family: Ubuntu, sans-serif;
+    font-size: 12pt;
+}
+/* style for lists and paragraphs p li ol ul inherit from body */
+h1 {
+    font-size: 16pt;
+    font-weight: bolder;
+}
+h2 {
+    font-size: 14pt;
+    text-align: center;
+}
+p {
+  margin: 0 10px 15px; /* leave a margin around paragraphs of text */
+}
+
+/* COLOURS */
+.pink {
+    color: DeepPink;
+}
+.orange {
+    color: DarkOrange;
+}
+.bg-white { background-color: #fff; }
+.bg-pink { background-color: #f4cccc; }
+.bg-orange { background-color: #f9cb9c; }
+.bg-yellow { background-color: #ffe599; }
+.bg-green { background-color: #b6d7a8; }
+.bg-blue { background-color: #a4c2f4; }
+.bg-violet { background-color: #d9d2e9; }
+
+/* LAYOUT */
+header, footer {
+  width: 552px;
+  background-color: rgba(244, 156, 21, 0.6); /* Codealia transparent orange */
+  border: 3px solid red;
+  padding: 0 22px; /* no padding top and bottom, 22px left and right */
+}
+header {
+  border-radius: 18px 18px 0 0; /* rounded corners top-feft and top right */
+}
+article {
+  width: 600px;
+}
+section {
+  width: 295px;
+  margin: 10px 0; /* add some space above and below columns */
+}
+section.left-col {
+  float: left;
+  margin-right: 5px; /* left column leaves a small gutter to the right */
+}
+section.right-col {
+  float: right;
+  margin-left: 5px; /* right column leaves a small gutter to the left */
+}
+section img {
+  width: 100%; /* be sure that images fit the width of their column */
+}
+footer {
+  font-size: 8pt;
+  padding: 10px 22px;
+  clear: both; /* stop section floats from interacting with footer */
+}

@@ -15,6 +15,9 @@ src_files:
   - assets/codealia-ide/ide.js
   - assets/ace/ace.js
   - assets/jasmine-jquery.js
+  - assets/angular.min.js
+  - assets/angular-routes.min.js
+  - assets/angular-mocks.js
 
 # stylesheets
 #

@@ -54,7 +54,7 @@ end
 
 Then(/^I should see[ a]* link to the "(.*?)" page$/) do |page_name|
   url = path_to(page_name)
-  page.should have_xpath "//a[@href='#{url}']"
+  page.should have_css "a[href^=\"#{url}\"]"
 end
 
 Given(/^I should see[ a]* link "([^"]*)" to "([^"]*)"$/) do |link_text, link|
