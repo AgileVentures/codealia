@@ -14,9 +14,9 @@ feature 'Managing blog posts' do
 
     expect(page).to have_content 'New post'
 
-    fill_in 'Title', :with => 'The new IDE'
-    fill_in 'Author', :with => 'Writer'
-    fill_in 'Content', :with => "Students program in IDE!"
+    fill_in 'Title', with: 'The new IDE'
+    fill_in 'Author', with: 'Writer'
+    fill_in 'Content', with: 'Students program in IDE!'
 
     click_button 'Create Post'
     expect(page).to have_content 'The new IDE'
@@ -24,7 +24,7 @@ feature 'Managing blog posts' do
 
   context 'with an existing blog post' do
     background do
-      @post = Post.create(:title => 'Codealia Blog Post', 
+      @post = Post.create(:title => 'Codealia Blog Post',
         :author => 'Person', :content => 'Learning Code')
     end
 
@@ -34,7 +34,7 @@ feature 'Managing blog posts' do
       page.driver.browser.authorize 'admin', 'secret'
       click_link 'Edit'
 
-      fill_in 'Title', :with => 'Here are the findings'
+      fill_in 'Title', with: 'Here are the findings'
       click_button 'Update Post'
 
       expect(page).to have_content 'Here are the findings'
