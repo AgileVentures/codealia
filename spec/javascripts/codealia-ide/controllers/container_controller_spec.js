@@ -42,6 +42,15 @@ describe('ContainerController', function() {
       scope.initializeEditor();
       expect(onEventSpy).toHaveBeenCalledWith("change", scope.generatePreview);
     });
+
+    it("copies html into the editor from the editable region if such a region is defined", function() {
+      editorSpy = spyOn(scope.editor, 'setValue').and.callThrough();
+      controller.setEditor(scope, element.parent());
+      expect(editorSpy).not.toHaveBeenCalled();
+      scope.preview = element;
+      controller.setEditor(scope, element.parent());
+      expect(editorSpy).toHaveBeenCalledWith(element);
+    });
   });
 
   it('sets html in the preview if a preview and editor are defined', function() {
