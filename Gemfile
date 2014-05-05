@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.0'
 gem 'rails', '4.1.0'
 
 # Use PostgreSQL
@@ -19,7 +19,7 @@ end
 
 group :development, :test do
   gem 'cucumber-rails', :require => false
-  gem 'debugger', '~> 1.6.6'
+  # gem 'debugger', '~> 1.6.6'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec-rails'

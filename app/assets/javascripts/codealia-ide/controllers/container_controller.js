@@ -25,7 +25,7 @@ CodealiaApp.controller("ContainerController", ["$scope",
       $scope.initializeEditor();
 
       if ($scope.preview) {
-        editor.setValue($scope.preview.html());
+        $scope.editor.setValue($scope.preview.html());
       }
     }
 

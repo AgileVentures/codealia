@@ -22,7 +22,11 @@ describe('ContainerController', function() {
     });
 
     describe("with an editor defined", function() {
-      xit("should update the contents of the editor", function() {
+      it("should update the contents of the editor", function() {
+        controller.setEditor(scope, element.parent());
+        editorSpy = spyOn(scope.editor, 'setValue').and.callThrough();
+        controller.makeEditable(scope, element);
+        expect(editorSpy).toHaveBeenCalledWith(scope.preview.html());
       });
     });
   });
@@ -50,13 +54,13 @@ describe('ContainerController', function() {
     });
 
     describe("with a preview defined", function() {
-      xit("should update the contents of the editor", function() {
+      it("should update the contents of the editor", function() {
         editorSpy = spyOn(scope.editor, 'setValue').and.callThrough();
         controller.setEditor(scope, element.parent());
         expect(editorSpy).not.toHaveBeenCalled();
         scope.preview = element;
         controller.setEditor(scope, element.parent());
-        expect(editorSpy).toHaveBeenCalledWith(element);
+        expect(editorSpy).toHaveBeenCalledWith(element.html());
       });
     });
   });
