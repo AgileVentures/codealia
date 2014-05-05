@@ -2,9 +2,15 @@ CodealiaApp.controller("ContainerController", ["$scope",
   function($scope) {
     $scope.editors = [];
 
-    $scope.generatePreview = function() {
+    $scope.updatePreview = function() {
       if ($scope.preview && $scope.editor) {
         $scope.preview.html($scope.editor.getValue());
+      }
+    }
+
+    $scope.updateEditor = function() {
+      if ($scope.preview && $scope.editor) {
+        $scope.editor.setValue($scope.preview.html());
       }
     }
 
@@ -17,23 +23,17 @@ CodealiaApp.controller("ContainerController", ["$scope",
       editor.setHighlightActiveLine(false);
       editor.setShowPrintMargin(false);
 
-      editor.getSession().on("change", $scope.generatePreview);
+      editor.getSession().on("change", $scope.updatePreview);
     }
 
     this.setEditor = function(scope, element, attrs) {
       $scope.editor = ace.edit(element.find("#passions-editor")[0]);
       $scope.initializeEditor();
-
-      if ($scope.preview) {
-        $scope.editor.setValue($scope.preview.html());
-      }
+      $scope.updateEditor();
     }
 
     this.makeEditable = function(scope, element, attrs) {
       $scope.preview = element;
-
-      if ($scope.editor) {
-        $scope.editor.setValue($scope.preview.html());
-      }
+      $scope.updateEditor();
     }
 }]);
