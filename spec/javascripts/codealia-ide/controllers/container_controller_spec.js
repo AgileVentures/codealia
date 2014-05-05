@@ -6,6 +6,7 @@ describe('ContainerController', function() {
     scope = {};
     controller = $controller('ContainerController', { $scope: scope });
   }));
+
   beforeEach(function() {
     setFixtures('<div><div id="passions-editor"></div></div>')
     element = $('div > div#passions-editor')
@@ -18,6 +19,11 @@ describe('ContainerController', function() {
 
     it('sets the preview attribute on the scope object', function() {
       expect(scope.preview).toEqual(element);
+    });
+
+    describe("with an editor defined", function() {
+      xit("should update the contents of the editor", function() {
+      });
     });
   });
 
@@ -43,17 +49,15 @@ describe('ContainerController', function() {
       expect(onEventSpy).toHaveBeenCalledWith("change", scope.generatePreview);
     });
 
-    it("copies html into the editor from the editable region if such a region is defined", function() {
-      editorSpy = spyOn(scope.editor, 'setValue').and.callThrough();
-      controller.setEditor(scope, element.parent());
-      expect(editorSpy).not.toHaveBeenCalled();
-      scope.preview = element;
-      controller.setEditor(scope, element.parent());
-      expect(editorSpy).toHaveBeenCalledWith(element);
+    describe("with a preview defined", function() {
+      xit("should update the contents of the editor", function() {
+        editorSpy = spyOn(scope.editor, 'setValue').and.callThrough();
+        controller.setEditor(scope, element.parent());
+        expect(editorSpy).not.toHaveBeenCalled();
+        scope.preview = element;
+        controller.setEditor(scope, element.parent());
+        expect(editorSpy).toHaveBeenCalledWith(element);
+      });
     });
   });
-
-  it('sets html in the preview if a preview and editor are defined', function() {
-    var htmlSpy = spyOn(scope.preview, 'html');
-  });
-})
+});
