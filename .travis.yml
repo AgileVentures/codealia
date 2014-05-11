@@ -1,18 +1,22 @@
 language: ruby
-rvm:
-- 2.1.1
+cache: bundler
+rvm: "2.1.1"
+
 before_install:
+  - "echo 'gem: --no-document' > ~/.gemrc"
   - gem install bundler
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+
 before_script:
   - bundle exec rake db:create:all
   - bundle exec rake db:migrate
-  - bundle exec rake db:test:prepare
+
 script:
-  - bundle exec rake cucumber
-  - bundle exec rake spec
+  - bundle exec rspec -f progress
   - bundle exec rake jasmine:ci
+  - bundle exec cucumber --profile ci
+
 deploy:
   provider: heroku
   api_key:
@@ -23,6 +27,7 @@ deploy:
     staging: codealia-staging
     master:  codealia-production
   run: "rake db:migrate"
+
 notifications:
   email:
     - info@agileventures.org
