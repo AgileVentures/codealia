@@ -12,40 +12,6 @@ describe('ContainerController', function() {
     element = $('div > div#passions-editor')
   });
 
-  describe("updatePreview()", function() {
-    describe("without a preview", function() {
-      xit("should not throw an exception", function() {
-      });
-    });
-
-    describe("without an editor", function() {
-      xit("should not throw an exception", function() {
-      });
-    });
-
-    describe("with a preview and editor defined", function() {
-      xit("should update the contents of the preview", function() {
-      });
-    });
-  });
-
-  describe("updateEditor()", function() {
-    describe("without a preview", function() {
-      xit("should not throw an exception", function() {
-      });
-    });
-
-    describe("without an editor", function() {
-      xit("should not throw an exception", function() {
-      });
-    });
-
-    describe("with a preview and editor defined", function() {
-      xit("should update the contents of the editor", function() {
-      });
-    });
-  });
-
   describe('makeEditable()', function() {
     var updateEditorSpy;
 
@@ -88,6 +54,85 @@ describe('ContainerController', function() {
 
     it("should update the contents of the editor", function() {
       expect(updateEditorSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe("updatePreview()", function() {
+    describe("without a preview", function() {
+      beforeEach(function() {
+        $scope.preview = null;
+        controller.setEditor({}, element.parent());
+      });
+
+      it("should not throw an exception", function() {
+        expect($scope.updatePreview).not.toThrow();
+      });
+    });
+
+    describe("without an editor", function() {
+      beforeEach(function() {
+        controller.makeEditable({}, element);
+        $scope.editor = null;
+      });
+
+      it("should not throw an exception", function() {
+        expect($scope.updatePreview).not.toThrow();
+      });
+    });
+
+    describe("with a preview and editor defined", function() {
+      beforeEach(function() {
+        appendSetFixtures('<div><div id="editable"></div></div>')
+        var el = $("div > #editable");
+        controller.setEditor({}, element.parent());
+        controller.makeEditable({}, el.parent());
+        el.html("");
+        $scope.updatePreview();
+      });
+
+      it("should update the contents of the preview", function() {
+        expect($scope.preview.html()).toEqual($scope.editor.getValue());
+      });
+    });
+  });
+
+  describe("updateEditor()", function() {
+    describe("without a preview", function() {
+      beforeEach(function() {
+        $scope.preview = null;
+        controller.setEditor({}, element.parent());
+      });
+
+      it("should not throw an exception", function() {
+        expect($scope.updateEditor).not.toThrow();
+      });
+    });
+
+    describe("without an editor", function() {
+      beforeEach(function() {
+        controller.makeEditable({}, element);
+        $scope.editor = null;
+      });
+
+      it("should not throw an exception", function() {
+        expect($scope.updateEditor).not.toThrow();
+      });
+    });
+
+
+    describe("with a preview and editor defined", function() {
+      beforeEach(function() {
+        appendSetFixtures('<div><div id="editable"></div></div>')
+        var el = $("div > #editable");
+        controller.setEditor({}, element.parent());
+        controller.makeEditable({}, el.parent());
+        el.html("hello there");
+        $scope.updateEditor();
+      });
+
+      it("should update the contents of the editor", function() {
+        expect($scope.editor.getValue()).toEqual("hello there");
+      });
     });
   });
 });
