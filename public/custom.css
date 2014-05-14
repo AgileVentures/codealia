@@ -80,7 +80,7 @@ small {
 
 /* LAYOUT */
 header, footer {
-  width: 552px;
+  width: 100%;
   background-color: rgba(244, 156, 21, 0.6); /* Codealia transparent orange */
   border: 3px solid red;
   padding: 0 22px; /* no padding top and bottom, 22px left and right */
@@ -91,11 +91,13 @@ header {
 }
 
 article {
-  width: 600px;
+  width: 95%;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 section {
-  width: 295px;
+  width: 49%;
   margin: 10px 0; /* add some space above and below columns */
 }
 
@@ -114,6 +116,7 @@ section img {
 }
 
 footer {
+  height: 130px;
   font-size: 8pt;
   padding: 10px 22px;
   clear: both; /* stop section floats from interacting with footer */
