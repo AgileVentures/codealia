@@ -15,7 +15,7 @@ src_files:
   - assets/ace/ace.js
   - assets/jasmine-jquery.js
   - assets/angular.min.js
-  - assets/angular-routes.min.js
+  - assets/angular-route.min.js
   - assets/angular-mocks.js
 
 # stylesheets
