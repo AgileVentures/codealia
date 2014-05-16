@@ -12,10 +12,6 @@ class StaticPagesController < ApplicationController
     @title = 'Terms & Conditions'
   end
 
-  def code_playground
-    render layout: 'layouts/application'
-  end
-
   def html_preview
     render layout: false
   end
