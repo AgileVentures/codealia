@@ -5,28 +5,28 @@ html body {
     font-size: 20px;
 }
 
-.jumbotron h1 { 
+.jumbotron h1 {
     font-family: 'Pacifico';
     font-size: 5em;
     margin-bottom: 0;
-    text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;  
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
 }
 
-.jumbotron h2 { 
+.jumbotron h2 {
     font-family: 'Bangers';
     color: white;
     text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
 }
 
-h1 { 
+h1 {
     font-family: 'Bangers';
     font-size: 4em;
     margin-bottom: 0;
     color: darkgray;
-    text-shadow: 1px 1px 1px #000, 3px 3px 5px black;  
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px black;
 }
 
-h2 { 
+h2 {
     font-family: 'Miltonian Tattoo';
     font-size: 3em;
     margin: 0.25em;
@@ -34,7 +34,7 @@ h2 {
     text-shadow: 1px 1px 1px #000, 3px 3px 5px white;
 }
 
-h4 { 
+h4 {
     font-family: 'Special Elite';
     font-size: 1.5em;
 }
@@ -79,43 +79,43 @@ small {
 .bg-violet { background-color: #d9d2e9; }
 
 /* LAYOUT */
-header, footer {
+.banner {
   width: 100%;
   background-color: rgba(244, 156, 21, 0.6); /* Codealia transparent orange */
   border: 3px solid red;
   padding: 0 22px; /* no padding top and bottom, 22px left and right */
 }
 
-header {
+header.banner {
   border-radius: 18px 18px 0 0; /* rounded corners top-feft and top right */
 }
 
-article {
+.columns {
   width: 95%;
   margin-left: 40px;
   margin-right: 40px;
 }
 
-section {
+.right-col, .left-col {
   width: 49%;
   margin: 10px 0; /* add some space above and below columns */
 }
 
-section.left-col {
+.left-col {
   float: left;
   margin-right: 5px; /* left column leaves a small gutter to the right */
 }
 
-section.right-col {
+.right-col {
   float: right;
   margin-left: 5px; /* right column leaves a small gutter to the left */
 }
 
-section img {
+.columns img {
   width: 100%; /* be sure that images fit the width of their column */
 }
 
-footer {
+footer.banner {
   height: 130px;
   font-size: 8pt;
   padding: 10px 22px;
