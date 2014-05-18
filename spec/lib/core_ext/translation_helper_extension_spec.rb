@@ -28,6 +28,6 @@ describe 'ActionView::Helpers::TranslationHelper extension' do
   end
 
   it 'should include an indicator for translated texts' do
-    expect(translated).to match /{{.*}}/
+    expect(translated).to match /<<.*>>/
   end
 end

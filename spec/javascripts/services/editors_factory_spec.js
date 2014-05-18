@@ -1,10 +1,9 @@
-describe('ContainerController', function() {
-  var $scope, controller, element;
+describe("EditorsFactory", function() {
+  var factory, element;
 
   beforeEach(module('Codealia'));
-  beforeEach(inject(function($controller) {
-    $scope = {};
-    controller = $controller('ContainerController', { $scope: $scope });
+  beforeEach(inject(function($injector) {
+    factory = $injector.get("EditorsFactory");
   }));
 
   beforeEach(function() {
@@ -16,12 +15,12 @@ describe('ContainerController', function() {
     var updateEditorSpy;
 
     beforeEach(function() {
-      updateEditorSpy = spyOn($scope, "updateEditor");
-      controller.makeEditable($scope, element);
+      updateEditorSpy = spyOn(factory, "updateEditor");
+      factory.makeEditable(factory, element);
     });
 
-    it('sets the preview attribute on the $scope object', function() {
-      expect($scope.preview).toEqual(element);
+    it('sets the preview attribute on the factory object', function() {
+      expect(factory.preview).toEqual(element);
     });
 
     it("should update the contents of the editor", function() {
@@ -34,22 +33,22 @@ describe('ContainerController', function() {
 
     beforeEach(function() {
       aceSpy = spyOn(ace, "edit").and.callThrough();
-      updateEditorSpy = spyOn($scope, "updateEditor");
-      controller.setEditor($scope, element.parent());
+      updateEditorSpy = spyOn(factory, "updateEditor");
+      factory.setEditor(factory, element.parent());
     });
 
-    it("should set the editor attribute on the $scope object", function() {
-      expect($scope.editor).toBeDefined();
+    it("should set the editor attribute on the factory object", function() {
+      expect(factory.editor).toBeDefined();
     });
 
     it("should call ace.edit with the #passions-editor element", function() {
       expect(aceSpy).toHaveBeenCalledWith(element[0]);
     });
 
-    it("should register $scope.updatePreview to the on change event", function() {
-      var onEventSpy = spyOn($scope.editor.getSession(), "on");
-      $scope.initializeEditor();
-      expect(onEventSpy).toHaveBeenCalledWith("change", $scope.updatePreview);
+    it("should register factory.updatePreview to the on change event", function() {
+      var onEventSpy = spyOn(factory.editor.getSession(), "on");
+      factory.initializeEditor();
+      expect(onEventSpy).toHaveBeenCalledWith("change", factory.updatePreview);
     });
 
     it("should update the contents of the editor", function() {
@@ -60,23 +59,23 @@ describe('ContainerController', function() {
   describe("updatePreview()", function() {
     describe("without a preview", function() {
       beforeEach(function() {
-        $scope.preview = null;
-        controller.setEditor({}, element.parent());
+        factory.preview = null;
+        factory.setEditor({}, element.parent());
       });
 
       it("should not throw an exception", function() {
-        expect($scope.updatePreview).not.toThrow();
+        expect(factory.updatePreview).not.toThrow();
       });
     });
 
     describe("without an editor", function() {
       beforeEach(function() {
-        controller.makeEditable({}, element);
-        $scope.editor = null;
+        factory.makeEditable({}, element);
+        factory.editor = null;
       });
 
       it("should not throw an exception", function() {
-        expect($scope.updatePreview).not.toThrow();
+        expect(factory.updatePreview).not.toThrow();
       });
     });
 
@@ -84,14 +83,14 @@ describe('ContainerController', function() {
       beforeEach(function() {
         appendSetFixtures('<div><div id="editable"></div></div>')
         var el = $("div > #editable");
-        controller.setEditor({}, element.parent());
-        controller.makeEditable({}, el.parent());
+        factory.setEditor({}, element.parent());
+        factory.makeEditable({}, el.parent());
         el.html("");
-        $scope.updatePreview();
+        factory.updatePreview();
       });
 
       it("should update the contents of the preview", function() {
-        expect($scope.preview.html()).toEqual($scope.editor.getValue());
+        expect(factory.preview.html()).toEqual(factory.editor.getValue());
       });
     });
   });
@@ -99,39 +98,38 @@ describe('ContainerController', function() {
   describe("updateEditor()", function() {
     describe("without a preview", function() {
       beforeEach(function() {
-        $scope.preview = null;
-        controller.setEditor({}, element.parent());
+        factory.preview = null;
+        factory.setEditor({}, element.parent());
       });
 
       it("should not throw an exception", function() {
-        expect($scope.updateEditor).not.toThrow();
+        expect(factory.updateEditor).not.toThrow();
       });
     });
 
     describe("without an editor", function() {
       beforeEach(function() {
-        controller.makeEditable({}, element);
-        $scope.editor = null;
+        factory.makeEditable({}, element);
+        factory.editor = null;
       });
 
       it("should not throw an exception", function() {
-        expect($scope.updateEditor).not.toThrow();
+        expect(factory.updateEditor).not.toThrow();
       });
     });
-
 
     describe("with a preview and editor defined", function() {
       beforeEach(function() {
         appendSetFixtures('<div><div id="editable"></div></div>')
         var el = $("div > #editable");
-        controller.setEditor({}, element.parent());
-        controller.makeEditable({}, el);
+        factory.setEditor({}, element.parent());
+        factory.makeEditable({}, el);
         el.html("hello there");
-        $scope.updateEditor();
+        factory.updateEditor();
       });
 
       it("should update the contents of the editor", function() {
-        expect($scope.editor.getValue()).toEqual("hello there");
+        expect(factory.editor.getValue()).toEqual("hello there");
       });
     });
   });
