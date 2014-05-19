@@ -10,8 +10,6 @@
 #
 src_files:
   - assets/application.js
-  - assets/codealia-ide/**/*.js
-  - assets/codealia-ide/angular-app.js
   - assets/ace/ace.js
   - assets/jasmine-jquery.js
   - assets/angular.min.js

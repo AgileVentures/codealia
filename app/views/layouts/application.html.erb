@@ -5,10 +5,9 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
-<body>
+<body ng-app="Codealia">
 
 <div id="wrap">
-
   <div class="container-fluid" style="min-height: 100%; margin-top: 50px;">
     <%= render partial: 'layouts/navbar' %>
     <%= yield %>
