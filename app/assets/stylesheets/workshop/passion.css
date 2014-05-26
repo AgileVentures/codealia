@@ -1,42 +1,42 @@
 @import url(http://fonts.googleapis.com/css?family=Special+Elite|Bangers|Miltonian+Tattoo|Neucha|Pacifico|);
 html body {
-    font-family: 'Neucha';
-    background-image: url('http://subtlepatterns.com/patterns/food.png');
-    font-size: 20px;
+  font-family: 'Neucha';
+  background-image: url('http://subtlepatterns.com/patterns/food.png');
+  font-size: 20px;
 }
 
 .jumbotron h1 {
-    font-family: 'Pacifico';
-    font-size: 5em;
-    margin-bottom: 0;
-    text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+  font-family: 'Pacifico';
+  font-size: 5em;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
 }
 
 .jumbotron h2 {
-    font-family: 'Bangers';
-    color: white;
-    text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+  font-family: 'Bangers';
+  color: white;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
 }
 
 h1 {
-    font-family: 'Bangers';
-    font-size: 4em;
-    margin-bottom: 0;
-    color: darkgray;
-    text-shadow: 1px 1px 1px #000, 3px 3px 5px black;
+  font-family: 'Bangers';
+  font-size: 4em;
+  margin-bottom: 0;
+  color: darkgray;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px black;
 }
 
 h2 {
-    font-family: 'Miltonian Tattoo';
-    font-size: 3em;
-    margin: 0.25em;
-    color: darkgrey;
-    text-shadow: 1px 1px 1px #000, 3px 3px 5px white;
+  font-family: 'Miltonian Tattoo';
+  font-size: 3em;
+  margin: 0.25em;
+  color: darkgrey;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px white;
 }
 
 h4 {
-    font-family: 'Special Elite';
-    font-size: 1.5em;
+  font-family: 'Special Elite';
+  font-size: 1.5em;
 }
 
 p {
@@ -44,27 +44,27 @@ p {
 }
 
 .bg-5 {
-    padding-top: 20px;
-    background-color: rgba(255, 255, 255, .9);
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    border-radius: 5px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, .9);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .bg-1 {
-    background: url('http://www.ilikewallpaper.net/ipad-air-wallpapers/download/8253/Dark-Pattern-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg') no-repeat center 50%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 500px;
+  background: url('http://www.ilikewallpaper.net/ipad-air-wallpapers/download/8253/Dark-Pattern-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg') no-repeat center 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
 }
 
 small {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /* COLOURS */
