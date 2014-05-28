@@ -43,3 +43,10 @@ public/assets/**
 
 # rvm
 .rvmrc
+
+# angular-seed-repo
+.agignore
+node_modules
+bower_components
+/selenium
+/coverage
