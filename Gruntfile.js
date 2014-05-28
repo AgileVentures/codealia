@@ -73,7 +73,7 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'app/scripts/{,*/}*.js'
+        'app/assets/javascripts/{,*/}*.js'
       ]
     },
 
@@ -81,8 +81,9 @@ module.exports = function(grunt) {
       styles: {
         dest: './app/assets/app.css',
         src: [
-          'app/styles/app.css',
-          //place your Stylesheet files here
+          'app/assets/stylesheets/{,*/}*.css',
+          'app/assets/stylesheets/{,*/}*.css.scss'
+          //place your stylesheets here
         ]
       },
       scripts: {
@@ -94,8 +95,7 @@ module.exports = function(grunt) {
           'bower_components/angular/angular.js',
           'bower_components/angular-route/angular-route.js',
           'bower_components/angular-animate/angular-animate.js',
-          'app/scripts/homePages.js',
-          'app/scripts/app.js',
+          'app/assets/javascripts/{,*/}*.js'
           //place your JavaScript files here
         ]
       },
@@ -106,11 +106,15 @@ module.exports = function(grunt) {
         livereload: 7777
       },
       assets: {
-        files: ['app/styles/**/*.css','app/scripts/**/*.js'],
+        files: [
+          'app/assets/stylesheets/**/*.css',
+          'app/assets/stylesheets/**/*.css.scss',
+          'app/assets/javascripts/**/*.js'
+        ],
         tasks: ['concat']
       },
       protractor: {
-        files: ['app/scripts/**/*.js','test/e2e/**/*.js'],
+        files: ['app/assets/javascripts/**/*.js','test/e2e/**/*.js'],
         tasks: ['protractor:auto']
       }
     },
@@ -141,7 +145,7 @@ module.exports = function(grunt) {
         singleRun: true,
         reporters: ['progress', 'coverage'],
         preprocessors: {
-          'app/scripts/*.js': ['coverage']
+          'app/assets/javascripts/**/*.js': ['coverage']
         },
         coverageReporter: {
           type : 'html',
