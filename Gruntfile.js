@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
     connect: {
       options: {
-        base: 'app/'
+        base: 'app/assets/javascripts/'
       },
       webserver: {
         options: {
