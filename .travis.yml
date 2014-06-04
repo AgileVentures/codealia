@@ -5,6 +5,8 @@ rvm: "2.1.1"
 before_install:
   - "echo 'gem: --no-document' > ~/.gemrc"
   - gem install bundler
+  - npm install
+  - npm install grunt-cli
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
 
@@ -14,7 +16,7 @@ before_script:
 
 script:
   - bundle exec rspec -f progress
-  - bundle exec rake jasmine:ci
+  - grunt karma:ci
   - bundle exec cucumber --profile ci
 
 deploy:
