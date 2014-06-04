@@ -8,6 +8,11 @@ module.exports = function(config) {
       'test/unit/**/*.js',
       'vendor/assets/javascripts/ace/**/*.js'
     ],
+    plugins: [
+      'karma-phantomjs-launcher',
+      'karma-chrome-launcher',
+      'karma-jasmine'
+    ],
     basePath: '../',
     frameworks: ['jasmine'],
     reporters: ['progress'],

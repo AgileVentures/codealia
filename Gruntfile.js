@@ -129,6 +129,12 @@ module.exports = function(grunt) {
     },
 
     karma: {
+      ci: {
+        configFile: './test/karma-unit.conf.js',
+        autoWatch: false,
+        singleRun: true,
+        browsers: [ 'PhantomJS' ]
+      },
       unit: {
         configFile: './test/karma-unit.conf.js',
         autoWatch: false,
