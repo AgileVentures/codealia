@@ -27,8 +27,6 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'launchy'
   gem 'poltergeist'
-  gem 'jasmine'
-  gem 'jasmine-jquery-rails'
 end
 
 group :production do
