@@ -5,6 +5,6 @@ CodealiaApp.directive("cdlPreview", [ "EditorsFactory",
       link: function(scope, element, attrs) {
         EditorsFactory.makeEditable(scope, element, attrs);
       }
-    }
+    };
   }
 ]);

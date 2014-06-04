@@ -6,6 +6,6 @@ CodealiaApp.directive("cdlPassionsEditor", [ "EditorsFactory",
       link: function(scope, element, attrs) {
         EditorsFactory.setEditor(scope, element, attrs);
       }
-    }
+    };
   }
 ]);

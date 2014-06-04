@@ -6,13 +6,13 @@ CodealiaApp.factory("EditorsFactory", function() {
     if (self.preview && self.editor) {
       self.preview.html(self.editor.getValue());
     }
-  }
+  };
 
   self.updateEditor = function() {
     if (self.preview && self.editor) {
       self.editor.setValue(self.preview.html());
     }
-  }
+  };
 
   self.initializeEditor = function() {
     var editor = self.editor;
@@ -24,18 +24,18 @@ CodealiaApp.factory("EditorsFactory", function() {
     editor.setShowPrintMargin(false);
 
     editor.getSession().on("change", self.updatePreview);
-  }
+  };
 
   self.setEditor = function(scope, element, attrs) {
     self.editor = ace.edit(element.children()[0]);
     self.initializeEditor();
     self.updateEditor();
-  }
+  };
 
   self.makeEditable = function(scope, element, attrs) {
     self.preview = element;
     self.updateEditor();
-  }
+  };
 
   return self;
 });
