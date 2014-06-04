@@ -5,7 +5,8 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'app/assets/javascripts/**/*.js',
-      'test/unit/**/*.js'
+      'test/unit/**/*.js',
+      'vendor/assets/javascripts/ace/**/*.js'
     ],
     basePath: '../',
     frameworks: ['jasmine'],

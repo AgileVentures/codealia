@@ -27,7 +27,7 @@ CodealiaApp.factory("EditorsFactory", function() {
   }
 
   self.setEditor = function(scope, element, attrs) {
-    self.editor = ace.edit(element.find("#passions-editor")[0]);
+    self.editor = ace.edit(element.children()[0]);
     self.initializeEditor();
     self.updateEditor();
   }
