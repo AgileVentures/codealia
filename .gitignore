@@ -44,7 +44,7 @@ public/assets/**
 # rvm
 .rvmrc
 
-# angular-seed-repo
+# from angular-seed-repo
 .agignore
 node_modules
 bower_components

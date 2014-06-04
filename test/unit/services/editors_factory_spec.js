@@ -14,8 +14,8 @@ describe("EditorsFactory", function() {
     editorScope.$digest();
   }));
 
-  it('cdl-preview works', inject(function($compile, EditorsFactory){
-    expect(EditorsFactory.preview.html()).toEqual('HELLO');
+  it('cdl-preview works', inject(function($compile){
+    expect(factory.preview.html()).toEqual('HELLO');
   }));
 
   it('cdl-editor works', inject(function(){
