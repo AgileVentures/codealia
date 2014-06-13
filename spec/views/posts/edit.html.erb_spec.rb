@@ -10,6 +10,8 @@ describe "posts/edit" do
   end
 
   it "renders the edit post form" do
+    pending 'blog auth'
+
     render
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
