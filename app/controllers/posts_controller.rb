@@ -76,7 +76,7 @@ class PostsController < ApplicationController
     def authenticate
       # TODO replace with a proper admin login
       authenticate_or_request_with_http_basic do |name, password|
-        name == "admin" && password == "secret"
+        name == ENV['CODEALIA_USERNAME'] && password == ENV['CODEALIA_PASSWORD']
       end
     end
 end
