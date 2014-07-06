@@ -1,0 +1,124 @@
+@import url(http://fonts.googleapis.com/css?family=Special+Elite|Bangers|Miltonian+Tattoo|Neucha|Pacifico|);
+html body {
+  font-family: 'Neucha';
+  background-image: url('http://subtlepatterns.com/patterns/food.png');
+  font-size: 20px;
+}
+
+.jumbotron h1 {
+  font-family: 'Pacifico';
+  font-size: 5em;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+}
+
+.jumbotron h2 {
+  font-family: 'Bangers';
+  color: white;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+}
+
+h1 {
+  font-family: 'Bangers';
+  font-size: 4em;
+  margin-bottom: 0;
+  color: darkgray;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px black;
+}
+
+h2 {
+  font-family: 'Miltonian Tattoo';
+  font-size: 3em;
+  margin: 0.25em;
+  color: darkgrey;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px white;
+}
+
+h4 {
+  font-family: 'Special Elite';
+  font-size: 1.5em;
+}
+
+p {
+  margin: 0 10px 15px; /* leave a margin around paragraphs of text */
+}
+
+.bg-5 {
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, .9);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.bg-1 {
+  background: url('http://www.ilikewallpaper.net/ipad-air-wallpapers/download/8253/Dark-Pattern-ipad-4-wallpaper-ilikewallpaper_com_1024.jpg') no-repeat center 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+}
+
+small {
+  font-size: 12px;
+}
+
+/* COLOURS */
+.pink { color: DeepPink; }
+.orange { color: DarkOrange; }
+.bg-white { background-color: #fff; }
+.bg-pink { background-color: #f4cccc; }
+.bg-orange { background-color: #f9cb9c; }
+.bg-yellow { background-color: #ffe599; }
+.bg-green { background-color: #b6d7a8; }
+.bg-blue { background-color: #a4c2f4; }
+.bg-violet { background-color: #d9d2e9; }
+
+/* LAYOUT */
+.banner {
+  width: 100%;
+  background-color: rgba(244, 156, 21, 0.6); /* Codealia transparent orange */
+  border: 3px solid red;
+  padding: 0 22px; /* no padding top and bottom, 22px left and right */
+}
+
+header.banner {
+  border-radius: 18px 18px 0 0; /* rounded corners top-feft and top right */
+}
+
+.columns {
+  width: 95%;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.right-col, .left-col {
+  width: 49%;
+  margin: 10px 0; /* add some space above and below columns */
+}
+
+.left-col {
+  float: left;
+  margin-right: 5px; /* left column leaves a small gutter to the right */
+}
+
+.right-col {
+  float: right;
+  margin-left: 5px; /* right column leaves a small gutter to the left */
+}
+
+.columns img {
+  width: 100%; /* be sure that images fit the width of their column */
+}
+
+footer.banner {
+  height: 130px;
+  font-size: 8pt;
+  padding: 10px 22px;
+  clear: both; /* stop section floats from interacting with footer */
+}
+
