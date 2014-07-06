@@ -6,7 +6,7 @@ module ActionView
         def translate(key, options = {})
           # display what has been translated
           translated = old_translate(key, options)
-          result = "{{ #{translated} }}"
+          result = "<<#{translated}>>"
           translated.html_safe? ? result.html_safe : result
         end
         alias :t :translate

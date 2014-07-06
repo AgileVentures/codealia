@@ -19,7 +19,8 @@ end
 
 group :development, :test do
   gem 'cucumber-rails', :require => false
-  gem 'debugger', '~> 1.6.6'
+  gem 'awesome_print' # plays well with pry
+  gem 'pry-byebug' # replaces pry (which uses the deprecated debugger gem)
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec-rails'
@@ -27,8 +28,6 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'launchy'
   gem 'poltergeist'
-  gem 'jasmine'
-  gem 'jasmine-jquery-rails'
 end
 
 group :production do

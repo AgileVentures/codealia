@@ -85,7 +85,7 @@ function setBackground(settings){
         //alert('No valid keyword');
         $('html body').css('background-image', 'url(\'' + baseUrl + '/giftly.png\')');
     }
-    $document.body.style.background
+    // $document.body.style.background
 }
 
 /* Instagram Tag Search
