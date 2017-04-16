@@ -9,6 +9,7 @@ feature 'Managing blog posts' do
   end
 
   scenario 'Posting a new blog' do
+    pending 'user login'
     page.driver.browser.authorize 'admin', 'secret'
     visit new_post_path
 
@@ -32,6 +33,7 @@ feature 'Managing blog posts' do
     end
 
     scenario 'Editing an existing post' do
+      pending 'user login'
       visit post_path(@post)
 
       page.driver.browser.authorize 'admin', 'secret'
