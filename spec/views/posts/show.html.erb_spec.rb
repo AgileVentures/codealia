@@ -7,6 +7,8 @@ describe "posts/show" do
   end
 
   it "should display individual post content" do
+    pending 'blog auth'
+
     render
     rendered.should have_selector('p#notice')
       rendered.should have_text(@post.title)
@@ -14,9 +16,9 @@ describe "posts/show" do
       rendered.should have_content("Posted #{time_ago_in_words(@post.created_at)}")
       rendered.should have_text(@post.content)
       rendered.should have_link('Edit')
-      rendered.should have_link('Back')   
+      rendered.should have_link('Back')
   end
 
 
-  
+
 end

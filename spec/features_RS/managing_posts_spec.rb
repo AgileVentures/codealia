@@ -4,11 +4,13 @@ require 'spec_helper'
 
 feature 'Managing blog posts' do
   scenario 'Guests cannot create posts' do
+    pending 'blog auth'
     visit new_post_path
     expect(page).to have_content 'Access denied'
   end
 
   scenario 'Posting a new blog' do
+    pending 'blog auth'
     page.driver.browser.authorize 'admin', 'secret'
     visit new_post_path
 
@@ -32,6 +34,7 @@ feature 'Managing blog posts' do
     end
 
     scenario 'Editing an existing post' do
+      pending 'blog auth'
       visit post_path(@post)
 
       page.driver.browser.authorize 'admin', 'secret'
